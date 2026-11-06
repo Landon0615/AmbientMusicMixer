@@ -1,0 +1,35 @@
+AMBIENT MUSIC MIXER v3 - terms and credits
+==========================================
+
+Credits
+  Music loops ("stems", mixer/stems/*.ogg) and the mixer page/scripts: original work by UhOh (FYMUhOh),
+  author of the Insurgency: Sandstorm mod "Ambient Music" (mod.io ID 6488692). Every sound in the kit was
+  synthesized from scratch for this mod (no samples, no third-party loops or sample libraries).
+
+Licence
+  - Code (index.html, css/, js/, mixer_server.py, serve.ps1, the launchers): MIT licence.
+  - Music loops: free to use for running Insurgency: Sandstorm servers with the Ambient Music mod, and in
+    videos and streams of the game. You may share this ZIP unmodified. Use outside of that (other games,
+    music releases, sample packs) needs the author's permission.
+  - Provided as is, without warranty.
+
+Insurgency: Sandstorm is a trademark of its owners; this is an unofficial fan-made tool.
+
+MIT licence text (applies to the code listed above)
+---------------------------------------------------
+Copyright (c) 2026 UhOh (FYMUhOh)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+associated documentation files (the "Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the
+following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial
+portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.

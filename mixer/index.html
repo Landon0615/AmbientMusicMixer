@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Ambient Music Mixer</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/mixer.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <div>
+      <div class="brand-title">AMBIENT MUSIC <span class="dim">//</span> MIX CONSOLE</div>
+      <div class="brand-sub" id="kitInfo">Stem kit</div>
+    </div>
+  </div>
+  <div class="status" id="status" role="status">INITIALIZING</div>
+</header>
+
+<section class="transport" aria-label="Transport">
+  <div class="tp-group">
+    <button id="btnPlay" class="btn btn-play" disabled><span class="ico-play" aria-hidden="true"></span><span class="lbl">LOAD STEMS</span></button>
+    <div class="bars" id="bars" aria-label="Bar position"></div>
+  </div>
+  <div class="tp-group intensity">
+    <div class="seg" id="segIntensity" role="radiogroup" aria-label="Intensity">
+      <button data-lvl="0" class="seg-btn calm" role="radio">CALM</button>
+      <button data-lvl="1" class="seg-btn medium" role="radio">MEDIUM</button>
+      <button data-lvl="2" class="seg-btn intense" role="radio">INTENSE</button>
+    </div>
+    <div class="heat"><div class="heat-fill" id="heatFill"></div><div class="heat-txt" id="heatTxt">CALM</div></div>
+    <button id="btnAuto" class="btn btn-auto" aria-pressed="false" title="Cycle calm, medium, intense and back with 3 s ramps, like a firefight">AUTO COMBAT</button>
+  </div>
+  <div class="tp-group master">
+    <label for="master" title="Exported as MixVolume (in-game bus gain = (MixVolume/100)^2)">MASTER</label>
+    <input type="range" id="master" min="0" max="100" value="80">
+    <output id="masterOut">80</output>
+    <div class="meter master-meter"><div class="meter-fill" id="masterMeter"></div></div>
+  </div>
+</section>
+
+<main class="layout">
+  <aside class="presets panel" aria-label="Presets">
+    <div class="panel-head"><span>PRESETS</span><span class="dim small">tick = in server rotation</span></div>
+    <ul class="preset-list" id="presetList"></ul>
+    <div class="preset-actions">
+      <button class="btn" id="btnNew">NEW</button>
+      <button class="btn" id="btnDup">DUPLICATE</button>
+      <button class="btn" id="btnRename">RENAME</button>
+      <button class="btn" id="btnRandom">RANDOMIZE</button>
+      <button class="btn" id="btnImport">IMPORT</button>
+      <button class="btn danger" id="btnDelete">DELETE</button>
+    </div>
+    <div class="save-row">
+      <button class="btn btn-save" id="btnSave" disabled>SAVE</button>
+      <button class="btn" id="btnRevert" disabled>REVERT</button>
+      <span class="dirty" id="dirty"></span>
+    </div>
+  </aside>
+
+  <section class="console" aria-label="Mixer">
+    <div class="console-head">
+      <input id="mixName" class="mix-name" maxlength="32" aria-label="Mix name" spellcheck="false">
+      <span class="dim small">Faders set each layer's volume at each combat level. Gain = (v/100)&sup2;.</span>
+    </div>
+    <div class="globals panel">
+      <div class="g-read" id="tempoKey">90 BPM &middot; A minor</div>
+    </div>
+    <div class="loud panel" aria-label="Loudness estimate">
+      <div class="loud-head"><span>LOUDNESS <span class="dim small">(estimate incl. master, LUFS)</span></span>
+        <span class="dim small">v2.2 music: calm &minus;28, combat &minus;18</span></div>
+      <div class="loud-rows" id="loudRows"></div>
+      <div class="warn small" id="loudWarn"></div>
+    </div>
+    <p class="warn small" id="extraWarn"></p>
+    <div class="strips" id="strips"></div>
+  </section>
+
+  <section class="export panel" aria-label="Server export">
+    <div class="panel-head"><span>SERVER EXPORT</span><span class="dim small">Game.ini section (copy into the server's Game.ini)</span></div>
+    <div class="export-row">
+      <label for="mode">MusicMode</label>
+      <select id="mode">
+        <option value="Mix">Mix &mdash; play a random mix from the rotation</option>
+        <option value="Classic">Classic &mdash; v2.2 tracks</option>
+        <option value="Random">Random &mdash; Mix or Classic per map</option>
+      </select>
+      <span class="warn" id="exportWarn"></span>
+    </div>
+    <pre class="ini" id="ini"></pre>
+    <div class="export-row">
+      <button class="btn" id="btnCopy">COPY</button>
+      <span class="dim small" id="copyMsg">Shows the saved and unsaved state. Save before you apply it on the server.</span>
+    </div>
+  </section>
+</main>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="panel-head"><span id="modalTitle">IMPORT RECIPE</span></div>
+    <p class="small dim" id="modalHint">Paste one recipe or +Mixes= line per row (old and new formats), or a whole Game.ini section.</p>
+    <textarea id="modalText" rows="5" spellcheck="false"></textarea>
+    <div class="modal-err" id="modalErr"></div>
+    <div class="save-row"><button class="btn btn-save" id="modalOk">OK</button><button class="btn" id="modalCancel">CANCEL</button></div>
+  </div>
+</div>
+
+<pre id="selftest" hidden></pre>
+<script src="js/recipe.js"></script>
+<script src="js/mixer.js"></script>
+</body>
+</html>

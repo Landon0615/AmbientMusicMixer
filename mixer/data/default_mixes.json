@@ -1,0 +1,710 @@
+{
+ "version": 4,
+ "kitSchema": 2,
+ "seeded": [
+  "v3.1-demos"
+ ],
+ "mode": "Mix",
+ "mixes": [
+  {
+   "id": "m_ccb44e78",
+   "name": "Night Ops",
+   "rotation": true,
+   "layers": {
+    "Drums": {
+     "variant": "Off",
+     "vol": [
+      0,
+      0,
+      0
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "A",
+     "fill": 0
+    },
+    "Perc": {
+     "variant": "V5",
+     "vol": [
+      70,
+      60,
+      40
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    },
+    "Bass": {
+     "variant": "V1",
+     "vol": [
+      50,
+      65,
+      80
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    },
+    "Pad": {
+     "variant": "V2",
+     "vol": [
+      70,
+      60,
+      50
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    },
+    "Orch": {
+     "variant": "V2",
+     "vol": [
+      40,
+      55,
+      50
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    },
+    "Lead": {
+     "variant": "V2",
+     "vol": [
+      35,
+      40,
+      30
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    },
+    "Guitar": {
+     "variant": "V5",
+     "vol": [
+      25,
+      35,
+      0
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    },
+    "FX": {
+     "variant": "V5",
+     "vol": [
+      40,
+      40,
+      30
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    }
+   }
+  },
+  {
+   "id": "m_4cf00822",
+   "name": "Ghost Recon",
+   "rotation": true,
+   "layers": {
+    "Drums": {
+     "variant": "V5",
+     "vol": [
+      15,
+      60,
+      75
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    },
+    "Perc": {
+     "variant": "V1",
+     "vol": [
+      20,
+      75,
+      95
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    },
+    "Bass": {
+     "variant": "V6",
+     "vol": [
+      30,
+      65,
+      80
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    },
+    "Pad": {
+     "variant": "V4",
+     "vol": [
+      55,
+      45,
+      40
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    },
+    "Orch": {
+     "variant": "V1",
+     "vol": [
+      30,
+      75,
+      90
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    },
+    "Lead": {
+     "variant": "V1",
+     "vol": [
+      40,
+      60,
+      45
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    },
+    "Guitar": {
+     "variant": "Off",
+     "vol": [
+      0,
+      0,
+      0
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "A",
+     "fill": 0
+    },
+    "FX": {
+     "variant": "V4",
+     "vol": [
+      0,
+      45,
+      55
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    }
+   }
+  },
+  {
+   "id": "m_c34c68ce",
+   "name": "John Wick",
+   "rotation": true,
+   "layers": {
+    "Drums": {
+     "variant": "V6",
+     "vol": [
+      0,
+      60,
+      95
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    },
+    "Perc": {
+     "variant": "V4",
+     "vol": [
+      0,
+      45,
+      60
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    },
+    "Bass": {
+     "variant": "V7",
+     "vol": [
+      0,
+      60,
+      90
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    },
+    "Pad": {
+     "variant": "V3",
+     "vol": [
+      20,
+      45,
+      55
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    },
+    "Orch": {
+     "variant": "V4",
+     "vol": [
+      0,
+      40,
+      60
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    },
+    "Lead": {
+     "variant": "V4",
+     "vol": [
+      0,
+      40,
+      65
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    },
+    "Guitar": {
+     "variant": "V7",
+     "vol": [
+      0,
+      45,
+      90
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    },
+    "FX": {
+     "variant": "V4",
+     "vol": [
+      20,
+      40,
+      50
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 0
+    }
+   }
+  },
+  {
+   "id": "m_97a6ad88",
+   "name": "Full Build",
+   "rotation": true,
+   "layers": {
+    "Drums": {
+     "variant": "V6",
+     "vol": [
+      0,
+      25,
+      90
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 4
+    },
+    "Perc": {
+     "variant": "V1",
+     "vol": [
+      15,
+      70,
+      85
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 4
+    },
+    "Bass": {
+     "variant": "V4",
+     "vol": [
+      45,
+      70,
+      90
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 4
+    },
+    "Pad": {
+     "variant": "V2",
+     "vol": [
+      65,
+      50,
+      35
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 4
+    },
+    "Orch": {
+     "variant": "V1",
+     "vol": [
+      0,
+      70,
+      80
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 4
+    },
+    "Lead": {
+     "variant": "V5",
+     "vol": [
+      25,
+      50,
+      55
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 4
+    },
+    "Guitar": {
+     "variant": "V7",
+     "vol": [
+      0,
+      0,
+      80
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 4
+    },
+    "FX": {
+     "variant": "V5",
+     "vol": [
+      40,
+      30,
+      20
+     ],
+     "lp": [
+      0,
+      0,
+      0
+     ],
+     "hp": 0,
+     "pan": 0,
+     "rev": 0,
+     "dly": 0,
+     "dlyT": "8d",
+     "drv": 0,
+     "pat": "AB",
+     "fill": 4
+    }
+   }
+  }
+ ]
+}

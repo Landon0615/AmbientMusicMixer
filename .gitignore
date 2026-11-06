@@ -1,0 +1,4 @@
+mixer/stems/*.ogg
+mixer/data/music_mixes.json
+mixer/data/*.bak
+__pycache__/

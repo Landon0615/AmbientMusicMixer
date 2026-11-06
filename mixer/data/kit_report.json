@@ -1,0 +1,2372 @@
+{
+ "schema": 2,
+ "kit": "AmbientMusic v3.1 stem kit",
+ "generated": "2026-11-04",
+ "format": {
+  "bpm": 90,
+  "meter": "4/4",
+  "key": "A minor",
+  "bars": 8,
+  "seconds": 21.333333333333332,
+  "samples": 1024000,
+  "sample_rate": 48000,
+  "channels": 2,
+  "wav_bit_depth": 24,
+  "preview": "Ogg Vorbis q5",
+  "lufs_target": -20.0,
+  "true_peak_max_db": -3.0
+ },
+ "harmony": [
+  "Am",
+  "Am",
+  "F",
+  "F",
+  "Dm",
+  "Dm",
+  "Em",
+  "E"
+ ],
+ "fader_curve": "gain = (v/100)^2",
+ "pattern_roles": {
+  "main": "A: the main 8-bar loop",
+  "alt": "B: alternate 8-bar loop, same harmony",
+  "fill": "Fill: the A loop with a fill/build in the last bar (leads into bar 1 of any pattern)"
+ },
+ "pattern_sequence_suggested": [
+  "A",
+  "B",
+  "A",
+  "Fill"
+ ],
+ "layer_order": [
+  "Drums",
+  "Perc",
+  "Bass",
+  "Pad",
+  "Orch",
+  "Lead",
+  "Guitar",
+  "FX"
+ ],
+ "layers": [
+  {
+   "id": "Drums",
+   "name": "Drums",
+   "description": "Drum kits and beats (kick/snare/hats family), from lo-fi to hard industrial.",
+   "variants": [
+    {
+     "id": "V1",
+     "name": "LofiKit",
+     "label": "Lo-fi kit",
+     "description": "Swung boom-bap kit, vinyl crackle, bitcrushed and lowpassed.",
+     "suits": [
+      "calm",
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Drums_V1_LofiKit_A.wav",
+       "ogg": "AM_Drums_V1_LofiKit_A.ogg",
+       "midi": "AM_Drums_V1_LofiKit_A.mid",
+       "description": "Boom-bap groove",
+       "lufs": -20.0,
+       "true_peak_db": -9.38,
+       "seam_db": -240.0,
+       "ogg_bytes": 388752
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Drums_V1_LofiKit_B.wav",
+       "ogg": "AM_Drums_V1_LofiKit_B.ogg",
+       "midi": "AM_Drums_V1_LofiKit_B.mid",
+       "description": "Busier kick, ghost snares, open hat",
+       "lufs": -20.0,
+       "true_peak_db": -8.95,
+       "seam_db": -240.0,
+       "ogg_bytes": 381522
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Drums_V1_LofiKit_Fill.wav",
+       "ogg": "AM_Drums_V1_LofiKit_Fill.ogg",
+       "midi": "AM_Drums_V1_LofiKit_Fill.mid",
+       "description": "Snare fill in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -8.92,
+       "seam_db": -240.0,
+       "ogg_bytes": 387093
+      }
+     ]
+    },
+    {
+     "id": "V2",
+     "name": "Breakbeat",
+     "label": "Breakbeat",
+     "description": "Busy breakbeat: ghost snares, 16th hats, open-hat lifts.",
+     "suits": [
+      "medium",
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Drums_V2_Breakbeat_A.wav",
+       "ogg": "AM_Drums_V2_Breakbeat_A.ogg",
+       "midi": "AM_Drums_V2_Breakbeat_A.mid",
+       "description": "Break groove",
+       "lufs": -20.0,
+       "true_peak_db": -8.72,
+       "seam_db": -240.0,
+       "ogg_bytes": 373787
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Drums_V2_Breakbeat_B.wav",
+       "ogg": "AM_Drums_V2_Breakbeat_B.ogg",
+       "midi": "AM_Drums_V2_Breakbeat_B.mid",
+       "description": "Syncopated kick, displaced ghosts",
+       "lufs": -20.0,
+       "true_peak_db": -8.85,
+       "seam_db": -240.0,
+       "ogg_bytes": 371303
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Drums_V2_Breakbeat_Fill.wav",
+       "ogg": "AM_Drums_V2_Breakbeat_Fill.ogg",
+       "midi": "AM_Drums_V2_Breakbeat_Fill.mid",
+       "description": "Snare roll in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -8.63,
+       "seam_db": -240.0,
+       "ogg_bytes": 372968
+      }
+     ]
+    },
+    {
+     "id": "V3",
+     "name": "Industrial",
+     "label": "Industrial",
+     "description": "Driven kick, metal hits, big clap-snare, noisy 16ths.",
+     "suits": [
+      "medium",
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Drums_V3_Industrial_A.wav",
+       "ogg": "AM_Drums_V3_Industrial_A.ogg",
+       "midi": "AM_Drums_V3_Industrial_A.mid",
+       "description": "Syncopated industrial groove",
+       "lufs": -20.0,
+       "true_peak_db": -12.3,
+       "seam_db": -240.0,
+       "ogg_bytes": 417750
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Drums_V3_Industrial_B.wav",
+       "ogg": "AM_Drums_V3_Industrial_B.ogg",
+       "midi": "AM_Drums_V3_Industrial_B.mid",
+       "description": "Half-time variation, denser hats",
+       "lufs": -20.0,
+       "true_peak_db": -12.28,
+       "seam_db": -240.0,
+       "ogg_bytes": 433532
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Drums_V3_Industrial_Fill.wav",
+       "ogg": "AM_Drums_V3_Industrial_Fill.ogg",
+       "midi": "AM_Drums_V3_Industrial_Fill.mid",
+       "description": "Kick/snare build bars 7-8",
+       "lufs": -20.0,
+       "true_peak_db": -12.3,
+       "seam_db": -240.0,
+       "ogg_bytes": 415891
+      }
+     ]
+    },
+    {
+     "id": "V4",
+     "name": "MinimalPulse",
+     "label": "Minimal pulse",
+     "description": "Soft deep kick, shaker 16ths, sparse rim. Calm-friendly.",
+     "suits": [
+      "calm",
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Drums_V4_MinimalPulse_A.wav",
+       "ogg": "AM_Drums_V4_MinimalPulse_A.ogg",
+       "midi": "AM_Drums_V4_MinimalPulse_A.mid",
+       "description": "Kick on 1 and 3",
+       "lufs": -20.0,
+       "true_peak_db": -5.94,
+       "seam_db": -240.0,
+       "ogg_bytes": 381045
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Drums_V4_MinimalPulse_B.wav",
+       "ogg": "AM_Drums_V4_MinimalPulse_B.ogg",
+       "midi": "AM_Drums_V4_MinimalPulse_B.mid",
+       "description": "Pickup kicks, more rim",
+       "lufs": -20.0,
+       "true_peak_db": -6.5,
+       "seam_db": -240.0,
+       "ogg_bytes": 381784
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Drums_V4_MinimalPulse_Fill.wav",
+       "ogg": "AM_Drums_V4_MinimalPulse_Fill.ogg",
+       "midi": "AM_Drums_V4_MinimalPulse_Fill.mid",
+       "description": "Rim roll in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -5.56,
+       "seam_db": -240.0,
+       "ogg_bytes": 380194
+      }
+     ]
+    },
+    {
+     "id": "V5",
+     "name": "MilitarySnare",
+     "label": "Military snare",
+     "description": "Marching snare cadence with buzz rolls and flams, field bass drum.",
+     "suits": [
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Drums_V5_MilitarySnare_A.wav",
+       "ogg": "AM_Drums_V5_MilitarySnare_A.ogg",
+       "midi": "AM_Drums_V5_MilitarySnare_A.mid",
+       "description": "Cadence with rolls",
+       "lufs": -20.0,
+       "true_peak_db": -4.71,
+       "seam_db": -240.0,
+       "ogg_bytes": 393205
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Drums_V5_MilitarySnare_B.wav",
+       "ogg": "AM_Drums_V5_MilitarySnare_B.ogg",
+       "midi": "AM_Drums_V5_MilitarySnare_B.mid",
+       "description": "Busier cadence, flams",
+       "lufs": -20.0,
+       "true_peak_db": -6.98,
+       "seam_db": -240.0,
+       "ogg_bytes": 390678
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Drums_V5_MilitarySnare_Fill.wav",
+       "ogg": "AM_Drums_V5_MilitarySnare_Fill.ogg",
+       "midi": "AM_Drums_V5_MilitarySnare_Fill.mid",
+       "description": "Crescendo buzz roll in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -6.07,
+       "seam_db": -240.0,
+       "ogg_bytes": 389148
+      }
+     ]
+    },
+    {
+     "id": "V6",
+     "name": "HardIndustrial",
+     "label": "Hard industrial (double-time)",
+     "description": "Hard electronic beat at a 180 feel: punchy driven kick, gated snare, clangs, glitch stutters.",
+     "suits": [
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Drums_V6_HardIndustrial_A.wav",
+       "ogg": "AM_Drums_V6_HardIndustrial_A.ogg",
+       "midi": "AM_Drums_V6_HardIndustrial_A.mid",
+       "description": "Double-time beat",
+       "lufs": -20.0,
+       "true_peak_db": -13.32,
+       "seam_db": -240.0,
+       "ogg_bytes": 389147
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Drums_V6_HardIndustrial_B.wav",
+       "ogg": "AM_Drums_V6_HardIndustrial_B.ogg",
+       "midi": "AM_Drums_V6_HardIndustrial_B.mid",
+       "description": "Busier kick, open hats, stutter in bar 4",
+       "lufs": -20.0,
+       "true_peak_db": -14.26,
+       "seam_db": -240.0,
+       "ogg_bytes": 462921
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Drums_V6_HardIndustrial_Fill.wav",
+       "ogg": "AM_Drums_V6_HardIndustrial_Fill.ogg",
+       "midi": "AM_Drums_V6_HardIndustrial_Fill.mid",
+       "description": "Accelerating glitch stutter in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -14.09,
+       "seam_db": -240.0,
+       "ogg_bytes": 389970
+      }
+     ]
+    },
+    {
+     "id": "V7",
+     "name": "Glitch",
+     "label": "Glitch beat",
+     "description": "Micro clicks, blips, reversed snares, crushed hits and stutters.",
+     "suits": [
+      "medium",
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Drums_V7_Glitch_A.wav",
+       "ogg": "AM_Drums_V7_Glitch_A.ogg",
+       "midi": "AM_Drums_V7_Glitch_A.mid",
+       "description": "Glitch groove",
+       "lufs": -20.01,
+       "true_peak_db": -3.39,
+       "seam_db": -240.0,
+       "ogg_bytes": 381685
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Drums_V7_Glitch_B.wav",
+       "ogg": "AM_Drums_V7_Glitch_B.ogg",
+       "midi": "AM_Drums_V7_Glitch_B.mid",
+       "description": "Thinner micro hits, different kick",
+       "lufs": -20.01,
+       "true_peak_db": -3.16,
+       "seam_db": -240.0,
+       "ogg_bytes": 372055
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Drums_V7_Glitch_Fill.wav",
+       "ogg": "AM_Drums_V7_Glitch_Fill.ogg",
+       "midi": "AM_Drums_V7_Glitch_Fill.mid",
+       "description": "Accelerating retrigger through bar 8",
+       "lufs": -20.01,
+       "true_peak_db": -3.39,
+       "seam_db": -240.0,
+       "ogg_bytes": 384637
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "Perc",
+   "name": "Percussion",
+   "description": "Separate percussion: taiko, hand drums, timpani/orchestral, metal, distant hits.",
+   "variants": [
+    {
+     "id": "V1",
+     "name": "Taiko",
+     "label": "Taiko ensemble",
+     "description": "O-daiko and chu-daiko (3 players each), ka rim clicks, big hall.",
+     "suits": [
+      "medium",
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Perc_V1_Taiko_A.wav",
+       "ogg": "AM_Perc_V1_Taiko_A.ogg",
+       "midi": "AM_Perc_V1_Taiko_A.mid",
+       "description": "Taiko groove",
+       "lufs": -20.0,
+       "true_peak_db": -6.0,
+       "seam_db": -240.0,
+       "ogg_bytes": 366029
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Perc_V1_Taiko_B.wav",
+       "ogg": "AM_Perc_V1_Taiko_B.ogg",
+       "midi": "AM_Perc_V1_Taiko_B.mid",
+       "description": "Driving 3-3-2 taiko",
+       "lufs": -20.0,
+       "true_peak_db": -7.2,
+       "seam_db": -240.0,
+       "ogg_bytes": 373530
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Perc_V1_Taiko_Fill.wav",
+       "ogg": "AM_Perc_V1_Taiko_Fill.ogg",
+       "midi": "AM_Perc_V1_Taiko_Fill.mid",
+       "description": "Taiko roll in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -6.32,
+       "seam_db": -240.0,
+       "ogg_bytes": 368154
+      }
+     ]
+    },
+    {
+     "id": "V2",
+     "name": "Darbuka",
+     "label": "Darbuka / hand drums",
+     "description": "Middle-Eastern doum/tek (maqsum), finger cymbals, frame drum.",
+     "suits": [
+      "calm",
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Perc_V2_Darbuka_A.wav",
+       "ogg": "AM_Perc_V2_Darbuka_A.ogg",
+       "midi": "AM_Perc_V2_Darbuka_A.mid",
+       "description": "Maqsum rhythm",
+       "lufs": -20.02,
+       "true_peak_db": -3.14,
+       "seam_db": -240.0,
+       "ogg_bytes": 399504
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Perc_V2_Darbuka_B.wav",
+       "ogg": "AM_Perc_V2_Darbuka_B.ogg",
+       "midi": "AM_Perc_V2_Darbuka_B.mid",
+       "description": "Baladi rhythm + frame drum",
+       "lufs": -20.0,
+       "true_peak_db": -3.17,
+       "seam_db": -240.0,
+       "ogg_bytes": 396385
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Perc_V2_Darbuka_Fill.wav",
+       "ogg": "AM_Perc_V2_Darbuka_Fill.ogg",
+       "midi": "AM_Perc_V2_Darbuka_Fill.mid",
+       "description": "Tek roll + zills in bar 8",
+       "lufs": -20.01,
+       "true_peak_db": -3.12,
+       "seam_db": -240.0,
+       "ogg_bytes": 400861
+      }
+     ]
+    },
+    {
+     "id": "V3",
+     "name": "Orchestral",
+     "label": "Timpani & cymbals",
+     "description": "Timpani with rolls, gran cassa, suspended-cymbal swells and crash.",
+     "suits": [
+      "medium",
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Perc_V3_Orchestral_A.wav",
+       "ogg": "AM_Perc_V3_Orchestral_A.ogg",
+       "midi": "AM_Perc_V3_Orchestral_A.mid",
+       "description": "Sparse timpani + swells",
+       "lufs": -20.0,
+       "true_peak_db": -5.63,
+       "seam_db": -160.4,
+       "ogg_bytes": 310597
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Perc_V3_Orchestral_B.wav",
+       "ogg": "AM_Perc_V3_Orchestral_B.ogg",
+       "midi": "AM_Perc_V3_Orchestral_B.mid",
+       "description": "Timpani ostinato",
+       "lufs": -20.0,
+       "true_peak_db": -7.45,
+       "seam_db": -240.0,
+       "ogg_bytes": 350460
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Perc_V3_Orchestral_Fill.wav",
+       "ogg": "AM_Perc_V3_Orchestral_Fill.ogg",
+       "midi": "AM_Perc_V3_Orchestral_Fill.mid",
+       "description": "2-bar timpani roll and cymbal swell",
+       "lufs": -20.0,
+       "true_peak_db": -5.25,
+       "seam_db": -240.0,
+       "ogg_bytes": 297653
+      }
+     ]
+    },
+    {
+     "id": "V4",
+     "name": "MetalWorks",
+     "label": "Metal / anvil",
+     "description": "Industrial metal percussion: anvil, pipes, chains, hammer.",
+     "suits": [
+      "medium",
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Perc_V4_MetalWorks_A.wav",
+       "ogg": "AM_Perc_V4_MetalWorks_A.ogg",
+       "midi": "AM_Perc_V4_MetalWorks_A.mid",
+       "description": "Metal groove",
+       "lufs": -20.0,
+       "true_peak_db": -9.23,
+       "seam_db": -240.0,
+       "ogg_bytes": 454731
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Perc_V4_MetalWorks_B.wav",
+       "ogg": "AM_Perc_V4_MetalWorks_B.ogg",
+       "midi": "AM_Perc_V4_MetalWorks_B.mid",
+       "description": "Off-beat anvils, chain runs",
+       "lufs": -20.0,
+       "true_peak_db": -9.2,
+       "seam_db": -240.0,
+       "ogg_bytes": 446853
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Perc_V4_MetalWorks_Fill.wav",
+       "ogg": "AM_Perc_V4_MetalWorks_Fill.ogg",
+       "midi": "AM_Perc_V4_MetalWorks_Fill.mid",
+       "description": "Anvil build in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -8.12,
+       "seam_db": -240.0,
+       "ogg_bytes": 454448
+      }
+     ]
+    },
+    {
+     "id": "V5",
+     "name": "DistantDrums",
+     "label": "Distant drums",
+     "description": "Far-off taiko and toms, heavily filtered, mostly reverb. Sparse.",
+     "suits": [
+      "calm"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Perc_V5_DistantDrums_A.wav",
+       "ogg": "AM_Perc_V5_DistantDrums_A.ogg",
+       "midi": "AM_Perc_V5_DistantDrums_A.mid",
+       "description": "Sparse distant hits",
+       "lufs": -20.0,
+       "true_peak_db": -5.81,
+       "seam_db": -149.0,
+       "ogg_bytes": 198883
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Perc_V5_DistantDrums_B.wav",
+       "ogg": "AM_Perc_V5_DistantDrums_B.ogg",
+       "midi": "AM_Perc_V5_DistantDrums_B.mid",
+       "description": "Call-and-answer hits",
+       "lufs": -20.0,
+       "true_peak_db": -4.45,
+       "seam_db": -148.8,
+       "ogg_bytes": 192633
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Perc_V5_DistantDrums_Fill.wav",
+       "ogg": "AM_Perc_V5_DistantDrums_Fill.ogg",
+       "midi": "AM_Perc_V5_DistantDrums_Fill.mid",
+       "description": "Distant roll in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -4.27,
+       "seam_db": -143.9,
+       "ogg_bytes": 197058
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "Bass",
+   "name": "Bass",
+   "description": "Bass lines from sub pulses to 808 slides, acid and distorted double-time bass.",
+   "variants": [
+    {
+     "id": "V1",
+     "name": "SubPulse",
+     "label": "Sub pulse",
+     "description": "Sine sub, heartbeat rhythm on the chord roots.",
+     "suits": [
+      "calm",
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Bass_V1_SubPulse_A.wav",
+       "ogg": "AM_Bass_V1_SubPulse_A.ogg",
+       "midi": "AM_Bass_V1_SubPulse_A.mid",
+       "description": "Heartbeat rhythm",
+       "lufs": -20.0,
+       "true_peak_db": -13.45,
+       "seam_db": -240.0,
+       "ogg_bytes": 73555
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Bass_V1_SubPulse_B.wav",
+       "ogg": "AM_Bass_V1_SubPulse_B.ogg",
+       "midi": "AM_Bass_V1_SubPulse_B.mid",
+       "description": "Syncopated 3-3-2 rhythm",
+       "lufs": -20.0,
+       "true_peak_db": -10.69,
+       "seam_db": -240.0,
+       "ogg_bytes": 74261
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Bass_V1_SubPulse_Fill.wav",
+       "ogg": "AM_Bass_V1_SubPulse_Fill.ogg",
+       "midi": "AM_Bass_V1_SubPulse_Fill.mid",
+       "description": "16th pickup in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -9.23,
+       "seam_db": -240.0,
+       "ogg_bytes": 74137
+      }
+     ]
+    },
+    {
+     "id": "V2",
+     "name": "Driving8ths",
+     "label": "Driving 8ths",
+     "description": "Filtered saw 8ths with octave off-beats.",
+     "suits": [
+      "medium",
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Bass_V2_Driving8ths_A.wav",
+       "ogg": "AM_Bass_V2_Driving8ths_A.ogg",
+       "midi": "AM_Bass_V2_Driving8ths_A.mid",
+       "description": "Straight 8ths",
+       "lufs": -20.0,
+       "true_peak_db": -10.02,
+       "seam_db": -240.0,
+       "ogg_bytes": 210767
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Bass_V2_Driving8ths_B.wav",
+       "ogg": "AM_Bass_V2_Driving8ths_B.ogg",
+       "midi": "AM_Bass_V2_Driving8ths_B.mid",
+       "description": "Syncopated with fifths/octaves",
+       "lufs": -20.0,
+       "true_peak_db": -9.74,
+       "seam_db": -240.0,
+       "ogg_bytes": 207075
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Bass_V2_Driving8ths_Fill.wav",
+       "ogg": "AM_Bass_V2_Driving8ths_Fill.ogg",
+       "midi": "AM_Bass_V2_Driving8ths_Fill.mid",
+       "description": "Chromatic run-up in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -10.06,
+       "seam_db": -240.0,
+       "ogg_bytes": 214413
+      }
+     ]
+    },
+    {
+     "id": "V3",
+     "name": "DistortedReese",
+     "label": "Distorted reese",
+     "description": "Detuned saws, pumping 8th envelope, wobbling filter.",
+     "suits": [
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Bass_V3_DistortedReese_A.wav",
+       "ogg": "AM_Bass_V3_DistortedReese_A.ogg",
+       "midi": "AM_Bass_V3_DistortedReese_A.mid",
+       "description": "2-bar notes, 8th pump",
+       "lufs": -20.0,
+       "true_peak_db": -11.71,
+       "seam_db": -62.9,
+       "ogg_bytes": 314953
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Bass_V3_DistortedReese_B.wav",
+       "ogg": "AM_Bass_V3_DistortedReese_B.ogg",
+       "midi": "AM_Bass_V3_DistortedReese_B.mid",
+       "description": "Re-attacked every bar, dotted-8th pump",
+       "lufs": -20.0,
+       "true_peak_db": -11.46,
+       "seam_db": -66.8,
+       "ogg_bytes": 280761
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Bass_V3_DistortedReese_Fill.wav",
+       "ogg": "AM_Bass_V3_DistortedReese_Fill.ogg",
+       "midi": "AM_Bass_V3_DistortedReese_Fill.mid",
+       "description": "Filter opens + 16th wobble in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -11.7,
+       "seam_db": -62.8,
+       "ogg_bytes": 320443
+      }
+     ]
+    },
+    {
+     "id": "V4",
+     "name": "808Slides",
+     "label": "808 slides",
+     "description": "Long saturated 808 sine bass with pitch glides, half-time phrasing.",
+     "suits": [
+      "medium",
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Bass_V4_808Slides_A.wav",
+       "ogg": "AM_Bass_V4_808Slides_A.ogg",
+       "midi": "AM_Bass_V4_808Slides_A.mid",
+       "description": "Half-time with slides",
+       "lufs": -20.0,
+       "true_peak_db": -9.91,
+       "seam_db": -240.0,
+       "ogg_bytes": 79431
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Bass_V4_808Slides_B.wav",
+       "ogg": "AM_Bass_V4_808Slides_B.ogg",
+       "midi": "AM_Bass_V4_808Slides_B.mid",
+       "description": "Octave/fifth slides",
+       "lufs": -20.0,
+       "true_peak_db": -9.94,
+       "seam_db": -240.0,
+       "ogg_bytes": 78679
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Bass_V4_808Slides_Fill.wav",
+       "ogg": "AM_Bass_V4_808Slides_Fill.ogg",
+       "midi": "AM_Bass_V4_808Slides_Fill.mid",
+       "description": "16th 808 roll in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -10.02,
+       "seam_db": -240.0,
+       "ogg_bytes": 81591
+      }
+     ]
+    },
+    {
+     "id": "V5",
+     "name": "Acid",
+     "label": "Acid bass",
+     "description": "Resonant 303-style line with accents and slides, filter sweep, driven.",
+     "suits": [
+      "medium",
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Bass_V5_Acid_A.wav",
+       "ogg": "AM_Bass_V5_Acid_A.ogg",
+       "midi": "AM_Bass_V5_Acid_A.mid",
+       "description": "Acid sequence",
+       "lufs": -20.0,
+       "true_peak_db": -11.56,
+       "seam_db": -238.6,
+       "ogg_bytes": 480015
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Bass_V5_Acid_B.wav",
+       "ogg": "AM_Bass_V5_Acid_B.ogg",
+       "midi": "AM_Bass_V5_Acid_B.mid",
+       "description": "Alternate sequence, faster sweep",
+       "lufs": -20.0,
+       "true_peak_db": -11.14,
+       "seam_db": -238.5,
+       "ogg_bytes": 487260
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Bass_V5_Acid_Fill.wav",
+       "ogg": "AM_Bass_V5_Acid_Fill.ogg",
+       "midi": "AM_Bass_V5_Acid_Fill.mid",
+       "description": "Filter wide open in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -11.67,
+       "seam_db": -239.0,
+       "ogg_bytes": 504768
+      }
+     ]
+    },
+    {
+     "id": "V6",
+     "name": "PluckBass",
+     "label": "Plucked synth bass",
+     "description": "Short saw/square pluck with sub, syncopated 16ths.",
+     "suits": [
+      "calm",
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Bass_V6_PluckBass_A.wav",
+       "ogg": "AM_Bass_V6_PluckBass_A.ogg",
+       "midi": "AM_Bass_V6_PluckBass_A.mid",
+       "description": "Syncopated pluck line",
+       "lufs": -20.0,
+       "true_peak_db": -4.87,
+       "seam_db": -240.0,
+       "ogg_bytes": 287646
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Bass_V6_PluckBass_B.wav",
+       "ogg": "AM_Bass_V6_PluckBass_B.ogg",
+       "midi": "AM_Bass_V6_PluckBass_B.mid",
+       "description": "Busier pluck line",
+       "lufs": -20.0,
+       "true_peak_db": -4.99,
+       "seam_db": -240.0,
+       "ogg_bytes": 290769
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Bass_V6_PluckBass_Fill.wav",
+       "ogg": "AM_Bass_V6_PluckBass_Fill.ogg",
+       "midi": "AM_Bass_V6_PluckBass_Fill.mid",
+       "description": "Scale run in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -5.03,
+       "seam_db": -240.0,
+       "ogg_bytes": 290588
+      }
+     ]
+    },
+    {
+     "id": "V7",
+     "name": "AggroBass",
+     "label": "Aggressive distorted bass",
+     "description": "Double-time distorted saw stack with growl filter, phrygian b2.",
+     "suits": [
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Bass_V7_AggroBass_A.wav",
+       "ogg": "AM_Bass_V7_AggroBass_A.ogg",
+       "midi": "AM_Bass_V7_AggroBass_A.mid",
+       "description": "16th riff",
+       "lufs": -20.0,
+       "true_peak_db": -6.26,
+       "seam_db": -240.0,
+       "ogg_bytes": 372936
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Bass_V7_AggroBass_B.wav",
+       "ogg": "AM_Bass_V7_AggroBass_B.ogg",
+       "midi": "AM_Bass_V7_AggroBass_B.mid",
+       "description": "Alternate riff, slower growl",
+       "lufs": -20.0,
+       "true_peak_db": -4.64,
+       "seam_db": -240.0,
+       "ogg_bytes": 369172
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Bass_V7_AggroBass_Fill.wav",
+       "ogg": "AM_Bass_V7_AggroBass_Fill.ogg",
+       "midi": "AM_Bass_V7_AggroBass_Fill.mid",
+       "description": "Chromatic climb in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -6.48,
+       "seam_db": -240.0,
+       "ogg_bytes": 371600
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "Pad",
+   "name": "Pad / Atmos",
+   "description": "Pads and atmospheres: synth pads, drones, choir, wind, granular textures.",
+   "variants": [
+    {
+     "id": "V1",
+     "name": "DarkPad",
+     "label": "Dark pad",
+     "description": "Supersaw chords, breathing lowpass, wide chorus, long reverb.",
+     "suits": [
+      "calm",
+      "medium",
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Pad_V1_DarkPad_A.wav",
+       "ogg": "AM_Pad_V1_DarkPad_A.ogg",
+       "midi": "AM_Pad_V1_DarkPad_A.mid",
+       "description": "Close voicing",
+       "lufs": -20.0,
+       "true_peak_db": -8.27,
+       "seam_db": -149.3,
+       "ogg_bytes": 327394
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Pad_V1_DarkPad_B.wav",
+       "ogg": "AM_Pad_V1_DarkPad_B.ogg",
+       "midi": "AM_Pad_V1_DarkPad_B.mid",
+       "description": "Higher inversions",
+       "lufs": -20.0,
+       "true_peak_db": -8.49,
+       "seam_db": -155.9,
+       "ogg_bytes": 334987
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Pad_V1_DarkPad_Fill.wav",
+       "ogg": "AM_Pad_V1_DarkPad_Fill.ogg",
+       "midi": "AM_Pad_V1_DarkPad_Fill.mid",
+       "description": "Filter swell into bar 1",
+       "lufs": -20.0,
+       "true_peak_db": -8.34,
+       "seam_db": -150.2,
+       "ogg_bytes": 332408
+      }
+     ]
+    },
+    {
+     "id": "V2",
+     "name": "CinematicDrone",
+     "label": "Cinematic drone",
+     "description": "A/E pedal drone, air band, shimmer swells.",
+     "suits": [
+      "calm",
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Pad_V2_CinematicDrone_A.wav",
+       "ogg": "AM_Pad_V2_CinematicDrone_A.ogg",
+       "midi": "AM_Pad_V2_CinematicDrone_A.mid",
+       "description": "Shimmer on bars 3 and 7",
+       "lufs": -20.0,
+       "true_peak_db": -6.46,
+       "seam_db": -149.8,
+       "ogg_bytes": 346710
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Pad_V2_CinematicDrone_B.wav",
+       "ogg": "AM_Pad_V2_CinematicDrone_B.ogg",
+       "midi": "AM_Pad_V2_CinematicDrone_B.mid",
+       "description": "Shimmer on bars 1 and 5, faster breathing",
+       "lufs": -20.0,
+       "true_peak_db": -6.57,
+       "seam_db": -148.7,
+       "ogg_bytes": 346727
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Pad_V2_CinematicDrone_Fill.wav",
+       "ogg": "AM_Pad_V2_CinematicDrone_Fill.ogg",
+       "midi": "AM_Pad_V2_CinematicDrone_Fill.mid",
+       "description": "Opening swell in bars 7-8",
+       "lufs": -20.0,
+       "true_peak_db": -6.84,
+       "seam_db": -147.0,
+       "ogg_bytes": 349839
+      }
+     ]
+    },
+    {
+     "id": "V3",
+     "name": "CyberStabs",
+     "label": "Cyber chord stabs",
+     "description": "Syncopated chord stabs with ping-pong delay.",
+     "suits": [
+      "medium",
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Pad_V3_CyberStabs_A.wav",
+       "ogg": "AM_Pad_V3_CyberStabs_A.ogg",
+       "midi": "AM_Pad_V3_CyberStabs_A.mid",
+       "description": "Stab rhythm 1",
+       "lufs": -20.0,
+       "true_peak_db": -3.48,
+       "seam_db": -140.2,
+       "ogg_bytes": 353732
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Pad_V3_CyberStabs_B.wav",
+       "ogg": "AM_Pad_V3_CyberStabs_B.ogg",
+       "midi": "AM_Pad_V3_CyberStabs_B.mid",
+       "description": "Stab rhythm 2",
+       "lufs": -20.0,
+       "true_peak_db": -4.23,
+       "seam_db": -141.0,
+       "ogg_bytes": 358665
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Pad_V3_CyberStabs_Fill.wav",
+       "ogg": "AM_Pad_V3_CyberStabs_Fill.ogg",
+       "midi": "AM_Pad_V3_CyberStabs_Fill.mid",
+       "description": "8th stabs in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -3.7,
+       "seam_db": -140.3,
+       "ogg_bytes": 355569
+      }
+     ]
+    },
+    {
+     "id": "V4",
+     "name": "DarkChoir",
+     "label": "Dark choir",
+     "description": "Four-part formant choir, aah to ooh, cathedral reverb.",
+     "suits": [
+      "calm",
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Pad_V4_DarkChoir_A.wav",
+       "ogg": "AM_Pad_V4_DarkChoir_A.ogg",
+       "midi": "AM_Pad_V4_DarkChoir_A.mid",
+       "description": "Aah->ooh, close voicing",
+       "lufs": -20.0,
+       "true_peak_db": -8.09,
+       "seam_db": -153.9,
+       "ogg_bytes": 348796
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Pad_V4_DarkChoir_B.wav",
+       "ogg": "AM_Pad_V4_DarkChoir_B.ogg",
+       "midi": "AM_Pad_V4_DarkChoir_B.mid",
+       "description": "Ooh->uu, higher voicing",
+       "lufs": -20.0,
+       "true_peak_db": -6.38,
+       "seam_db": -146.2,
+       "ogg_bytes": 336963
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Pad_V4_DarkChoir_Fill.wav",
+       "ogg": "AM_Pad_V4_DarkChoir_Fill.ogg",
+       "midi": "AM_Pad_V4_DarkChoir_Fill.mid",
+       "description": "Crescendo with high top note in bars 7-8",
+       "lufs": -20.0,
+       "true_peak_db": -8.45,
+       "seam_db": -154.5,
+       "ogg_bytes": 349645
+      }
+     ]
+    },
+    {
+     "id": "V5",
+     "name": "DesertWind",
+     "label": "Desert wind",
+     "description": "Drifting resonant wind bands, gusts, whistles, low rumble.",
+     "suits": [
+      "calm",
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Pad_V5_DesertWind_A.wav",
+       "ogg": "AM_Pad_V5_DesertWind_A.ogg",
+       "midi": "AM_Pad_V5_DesertWind_A.mid",
+       "description": "Wind",
+       "lufs": -20.0,
+       "true_peak_db": -6.71,
+       "seam_db": -240.0,
+       "ogg_bytes": 417917
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Pad_V5_DesertWind_B.wav",
+       "ogg": "AM_Pad_V5_DesertWind_B.ogg",
+       "midi": "AM_Pad_V5_DesertWind_B.mid",
+       "description": "Different gust cycle + sand hiss",
+       "lufs": -20.0,
+       "true_peak_db": -5.64,
+       "seam_db": -221.1,
+       "ogg_bytes": 447889
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Pad_V5_DesertWind_Fill.wav",
+       "ogg": "AM_Pad_V5_DesertWind_Fill.ogg",
+       "midi": "AM_Pad_V5_DesertWind_Fill.mid",
+       "description": "Strong gust building into bar 1",
+       "lufs": -20.02,
+       "true_peak_db": -3.52,
+       "seam_db": -240.0,
+       "ogg_bytes": 417147
+      }
+     ]
+    },
+    {
+     "id": "V6",
+     "name": "Granular",
+     "label": "Granular texture",
+     "description": "Cloud of short tonal grains on the chord tones, breathing density.",
+     "suits": [
+      "calm",
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Pad_V6_Granular_A.wav",
+       "ogg": "AM_Pad_V6_Granular_A.ogg",
+       "midi": "AM_Pad_V6_Granular_A.mid",
+       "description": "Mid-register grains",
+       "lufs": -20.0,
+       "true_peak_db": -6.04,
+       "seam_db": -136.6,
+       "ogg_bytes": 385217
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Pad_V6_Granular_B.wav",
+       "ogg": "AM_Pad_V6_Granular_B.ogg",
+       "midi": "AM_Pad_V6_Granular_B.mid",
+       "description": "High, longer shimmer grains",
+       "lufs": -20.0,
+       "true_peak_db": -7.6,
+       "seam_db": -137.2,
+       "ogg_bytes": 395617
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Pad_V6_Granular_Fill.wav",
+       "ogg": "AM_Pad_V6_Granular_Fill.ogg",
+       "midi": "AM_Pad_V6_Granular_Fill.mid",
+       "description": "Dense rising cloud in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -6.65,
+       "seam_db": -134.0,
+       "ogg_bytes": 393229
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "Orch",
+   "name": "Strings / Brass",
+   "description": "Synthesized orchestral layer: low string ostinatos, dark strings, brass, tremolo.",
+   "variants": [
+    {
+     "id": "V1",
+     "name": "StringOstinato",
+     "label": "Low string ostinato",
+     "description": "Spiccato celli + basses, 16ths in 3-3-3-3-4 accents.",
+     "suits": [
+      "medium",
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Orch_V1_StringOstinato_A.wav",
+       "ogg": "AM_Orch_V1_StringOstinato_A.ogg",
+       "midi": "AM_Orch_V1_StringOstinato_A.mid",
+       "description": "16th spiccato ostinato",
+       "lufs": -20.0,
+       "true_peak_db": -5.53,
+       "seam_db": -240.0,
+       "ogg_bytes": 342437
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Orch_V1_StringOstinato_B.wav",
+       "ogg": "AM_Orch_V1_StringOstinato_B.ogg",
+       "midi": "AM_Orch_V1_StringOstinato_B.mid",
+       "description": "8th marcato 3-3-2",
+       "lufs": -20.0,
+       "true_peak_db": -3.7,
+       "seam_db": -240.0,
+       "ogg_bytes": 330712
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Orch_V1_StringOstinato_Fill.wav",
+       "ogg": "AM_Orch_V1_StringOstinato_Fill.ogg",
+       "midi": "AM_Orch_V1_StringOstinato_Fill.mid",
+       "description": "Scale run up in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -5.14,
+       "seam_db": -240.0,
+       "ogg_bytes": 341463
+      }
+     ]
+    },
+    {
+     "id": "V2",
+     "name": "DarkStrings",
+     "label": "Dark strings",
+     "description": "Low divisi strings, con sordino, hairpin swells per chord.",
+     "suits": [
+      "calm",
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Orch_V2_DarkStrings_A.wav",
+       "ogg": "AM_Orch_V2_DarkStrings_A.ogg",
+       "midi": "AM_Orch_V2_DarkStrings_A.mid",
+       "description": "Low voicing",
+       "lufs": -20.0,
+       "true_peak_db": -6.67,
+       "seam_db": -240.0,
+       "ogg_bytes": 320619
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Orch_V2_DarkStrings_B.wav",
+       "ogg": "AM_Orch_V2_DarkStrings_B.ogg",
+       "midi": "AM_Orch_V2_DarkStrings_B.mid",
+       "description": "High voicing, brighter",
+       "lufs": -20.0,
+       "true_peak_db": -9.08,
+       "seam_db": -240.0,
+       "ogg_bytes": 360992
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Orch_V2_DarkStrings_Fill.wav",
+       "ogg": "AM_Orch_V2_DarkStrings_Fill.ogg",
+       "midi": "AM_Orch_V2_DarkStrings_Fill.mid",
+       "description": "Crescendo through bars 7-8",
+       "lufs": -20.0,
+       "true_peak_db": -6.8,
+       "seam_db": -240.0,
+       "ogg_bytes": 320740
+      }
+     ]
+    },
+    {
+     "id": "V3",
+     "name": "BrassSwells",
+     "label": "Brass swells",
+     "description": "Horns + trombones + tuba, crescendo on every chord.",
+     "suits": [
+      "medium",
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Orch_V3_BrassSwells_A.wav",
+       "ogg": "AM_Orch_V3_BrassSwells_A.ogg",
+       "midi": "AM_Orch_V3_BrassSwells_A.mid",
+       "description": "Swell per chord",
+       "lufs": -20.0,
+       "true_peak_db": -7.76,
+       "seam_db": -240.0,
+       "ogg_bytes": 323433
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Orch_V3_BrassSwells_B.wav",
+       "ogg": "AM_Orch_V3_BrassSwells_B.ogg",
+       "midi": "AM_Orch_V3_BrassSwells_B.mid",
+       "description": "Half-bar swells",
+       "lufs": -20.0,
+       "true_peak_db": -7.36,
+       "seam_db": -240.0,
+       "ogg_bytes": 325838
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Orch_V3_BrassSwells_Fill.wav",
+       "ogg": "AM_Orch_V3_BrassSwells_Fill.ogg",
+       "midi": "AM_Orch_V3_BrassSwells_Fill.mid",
+       "description": "Long crescendo through bars 7-8",
+       "lufs": -20.0,
+       "true_peak_db": -7.56,
+       "seam_db": -240.0,
+       "ogg_bytes": 322297
+      }
+     ]
+    },
+    {
+     "id": "V4",
+     "name": "BrassHits",
+     "label": "Brass hits & braams",
+     "description": "Distorted low brass braams on downbeats, short brass/string stabs.",
+     "suits": [
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Orch_V4_BrassHits_A.wav",
+       "ogg": "AM_Orch_V4_BrassHits_A.ogg",
+       "midi": "AM_Orch_V4_BrassHits_A.mid",
+       "description": "Braams on bars 1 and 5 + stabs",
+       "lufs": -20.0,
+       "true_peak_db": -7.21,
+       "seam_db": -240.0,
+       "ogg_bytes": 312631
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Orch_V4_BrassHits_B.wav",
+       "ogg": "AM_Orch_V4_BrassHits_B.ogg",
+       "midi": "AM_Orch_V4_BrassHits_B.mid",
+       "description": "Braams every 2 bars, busier stabs",
+       "lufs": -20.0,
+       "true_peak_db": -7.35,
+       "seam_db": -240.0,
+       "ogg_bytes": 344987
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Orch_V4_BrassHits_Fill.wav",
+       "ogg": "AM_Orch_V4_BrassHits_Fill.ogg",
+       "midi": "AM_Orch_V4_BrassHits_Fill.mid",
+       "description": "8th-note stabs in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -6.56,
+       "seam_db": -240.0,
+       "ogg_bytes": 302597
+      }
+     ]
+    },
+    {
+     "id": "V5",
+     "name": "TremoloStrings",
+     "label": "High tremolo strings",
+     "description": "Violins tremolando on chord tones with hairpins.",
+     "suits": [
+      "medium",
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Orch_V5_TremoloStrings_A.wav",
+       "ogg": "AM_Orch_V5_TremoloStrings_A.ogg",
+       "midi": "AM_Orch_V5_TremoloStrings_A.mid",
+       "description": "Chord tones",
+       "lufs": -20.0,
+       "true_peak_db": -8.5,
+       "seam_db": -240.0,
+       "ogg_bytes": 375861
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Orch_V5_TremoloStrings_B.wav",
+       "ogg": "AM_Orch_V5_TremoloStrings_B.ogg",
+       "midi": "AM_Orch_V5_TremoloStrings_B.mid",
+       "description": "Semitone clusters (more tension)",
+       "lufs": -20.0,
+       "true_peak_db": -8.53,
+       "seam_db": -240.0,
+       "ogg_bytes": 373008
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Orch_V5_TremoloStrings_Fill.wav",
+       "ogg": "AM_Orch_V5_TremoloStrings_Fill.ogg",
+       "midi": "AM_Orch_V5_TremoloStrings_Fill.mid",
+       "description": "Chromatic rise in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -8.33,
+       "seam_db": -240.0,
+       "ogg_bytes": 376892
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "Lead",
+   "name": "Lead",
+   "description": "Melodic leads: duduk-style reed, ney flute, warm synth lead, industrial riff, synth pulses.",
+   "variants": [
+    {
+     "id": "V1",
+     "name": "Duduk",
+     "label": "Duduk-style reed",
+     "description": "Double-reed line with slides and grace notes, warm hall.",
+     "suits": [
+      "calm",
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Lead_V1_Duduk_A.wav",
+       "ogg": "AM_Lead_V1_Duduk_A.ogg",
+       "midi": "AM_Lead_V1_Duduk_A.mid",
+       "description": "Melody 1",
+       "lufs": -20.0,
+       "true_peak_db": -9.39,
+       "seam_db": -192.2,
+       "ogg_bytes": 380570
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Lead_V1_Duduk_B.wav",
+       "ogg": "AM_Lead_V1_Duduk_B.ogg",
+       "midi": "AM_Lead_V1_Duduk_B.mid",
+       "description": "Melody 2 (answer)",
+       "lufs": -20.0,
+       "true_peak_db": -8.21,
+       "seam_db": -240.0,
+       "ogg_bytes": 364428
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Lead_V1_Duduk_Fill.wav",
+       "ogg": "AM_Lead_V1_Duduk_Fill.ogg",
+       "midi": "AM_Lead_V1_Duduk_Fill.mid",
+       "description": "Melody 1 with ornamented ending",
+       "lufs": -20.0,
+       "true_peak_db": -9.33,
+       "seam_db": -160.6,
+       "ogg_bytes": 379763
+      }
+     ]
+    },
+    {
+     "id": "V2",
+     "name": "NeyFlute",
+     "label": "Ney flute",
+     "description": "Breathy end-blown flute, high register, long reverb.",
+     "suits": [
+      "calm",
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Lead_V2_NeyFlute_A.wav",
+       "ogg": "AM_Lead_V2_NeyFlute_A.ogg",
+       "midi": "AM_Lead_V2_NeyFlute_A.mid",
+       "description": "Melody 1",
+       "lufs": -20.0,
+       "true_peak_db": -9.0,
+       "seam_db": -142.9,
+       "ogg_bytes": 387529
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Lead_V2_NeyFlute_B.wav",
+       "ogg": "AM_Lead_V2_NeyFlute_B.ogg",
+       "midi": "AM_Lead_V2_NeyFlute_B.mid",
+       "description": "Melody 2 (higher)",
+       "lufs": -20.0,
+       "true_peak_db": -7.46,
+       "seam_db": -141.3,
+       "ogg_bytes": 384775
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Lead_V2_NeyFlute_Fill.wav",
+       "ogg": "AM_Lead_V2_NeyFlute_Fill.ogg",
+       "midi": "AM_Lead_V2_NeyFlute_Fill.mid",
+       "description": "Melody 1 with rising run",
+       "lufs": -20.0,
+       "true_peak_db": -8.95,
+       "seam_db": -142.0,
+       "ogg_bytes": 387991
+      }
+     ]
+    },
+    {
+     "id": "V3",
+     "name": "WarmLead",
+     "label": "Warm dark synth lead",
+     "description": "Detuned saw lead with portamento and vibrato, tape-ish delay.",
+     "suits": [
+      "calm",
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Lead_V3_WarmLead_A.wav",
+       "ogg": "AM_Lead_V3_WarmLead_A.ogg",
+       "midi": "AM_Lead_V3_WarmLead_A.mid",
+       "description": "Low melody",
+       "lufs": -20.0,
+       "true_peak_db": -8.57,
+       "seam_db": -144.7,
+       "ogg_bytes": 349299
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Lead_V3_WarmLead_B.wav",
+       "ogg": "AM_Lead_V3_WarmLead_B.ogg",
+       "midi": "AM_Lead_V3_WarmLead_B.mid",
+       "description": "High melody",
+       "lufs": -20.0,
+       "true_peak_db": -8.94,
+       "seam_db": -142.6,
+       "ogg_bytes": 363848
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Lead_V3_WarmLead_Fill.wav",
+       "ogg": "AM_Lead_V3_WarmLead_Fill.ogg",
+       "midi": "AM_Lead_V3_WarmLead_Fill.mid",
+       "description": "Low melody with run in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -8.66,
+       "seam_db": -142.6,
+       "ogg_bytes": 350058
+      }
+     ]
+    },
+    {
+     "id": "V4",
+     "name": "IndustrialRiff",
+     "label": "Industrial synth riff",
+     "description": "Double-time distorted synth riff, phrygian b2/b5.",
+     "suits": [
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Lead_V4_IndustrialRiff_A.wav",
+       "ogg": "AM_Lead_V4_IndustrialRiff_A.ogg",
+       "midi": "AM_Lead_V4_IndustrialRiff_A.mid",
+       "description": "Riff 1",
+       "lufs": -20.0,
+       "true_peak_db": -3.86,
+       "seam_db": -240.0,
+       "ogg_bytes": 481727
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Lead_V4_IndustrialRiff_B.wav",
+       "ogg": "AM_Lead_V4_IndustrialRiff_B.ogg",
+       "midi": "AM_Lead_V4_IndustrialRiff_B.mid",
+       "description": "Riff 2 (octave jumps)",
+       "lufs": -20.0,
+       "true_peak_db": -4.45,
+       "seam_db": -240.0,
+       "ogg_bytes": 484661
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Lead_V4_IndustrialRiff_Fill.wav",
+       "ogg": "AM_Lead_V4_IndustrialRiff_Fill.ogg",
+       "midi": "AM_Lead_V4_IndustrialRiff_Fill.mid",
+       "description": "Chromatic climb in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -4.08,
+       "seam_db": -240.0,
+       "ogg_bytes": 483872
+      }
+     ]
+    },
+    {
+     "id": "V5",
+     "name": "SynthPulse",
+     "label": "Synth pulse ostinato",
+     "description": "Filtered square 16th pulses on root/fifth/octave.",
+     "suits": [
+      "calm",
+      "medium",
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Lead_V5_SynthPulse_A.wav",
+       "ogg": "AM_Lead_V5_SynthPulse_A.ogg",
+       "midi": "AM_Lead_V5_SynthPulse_A.mid",
+       "description": "16th pulses",
+       "lufs": -20.0,
+       "true_peak_db": -7.48,
+       "seam_db": -154.4,
+       "ogg_bytes": 332537
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Lead_V5_SynthPulse_B.wav",
+       "ogg": "AM_Lead_V5_SynthPulse_B.ogg",
+       "midi": "AM_Lead_V5_SynthPulse_B.mid",
+       "description": "3-3-2 dotted pulses",
+       "lufs": -20.0,
+       "true_peak_db": -5.59,
+       "seam_db": -157.3,
+       "ogg_bytes": 332517
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Lead_V5_SynthPulse_Fill.wav",
+       "ogg": "AM_Lead_V5_SynthPulse_Fill.ogg",
+       "midi": "AM_Lead_V5_SynthPulse_Fill.mid",
+       "description": "32nd pulses + filter open in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -6.68,
+       "seam_db": -156.5,
+       "ogg_bytes": 352240
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "Guitar",
+   "name": "Guitar",
+   "description": "Modelled guitars (Karplus-Strong + amp sim): clean, chug, swells, riffs, baritone, heavy.",
+   "variants": [
+    {
+     "id": "V1",
+     "name": "CleanDelay",
+     "label": "Clean delay",
+     "description": "Let-ring arpeggios, chorus, ping-pong delay.",
+     "suits": [
+      "calm",
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Guitar_V1_CleanDelay_A.wav",
+       "ogg": "AM_Guitar_V1_CleanDelay_A.ogg",
+       "midi": "AM_Guitar_V1_CleanDelay_A.mid",
+       "description": "Arpeggio 1",
+       "lufs": -20.0,
+       "true_peak_db": -9.63,
+       "seam_db": -145.5,
+       "ogg_bytes": 409838
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Guitar_V1_CleanDelay_B.wav",
+       "ogg": "AM_Guitar_V1_CleanDelay_B.ogg",
+       "midi": "AM_Guitar_V1_CleanDelay_B.mid",
+       "description": "Arpeggio 2",
+       "lufs": -20.0,
+       "true_peak_db": -9.56,
+       "seam_db": -145.7,
+       "ogg_bytes": 408779
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Guitar_V1_CleanDelay_Fill.wav",
+       "ogg": "AM_Guitar_V1_CleanDelay_Fill.ogg",
+       "midi": "AM_Guitar_V1_CleanDelay_Fill.mid",
+       "description": "Upward strum run in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -9.57,
+       "seam_db": -145.3,
+       "ogg_bytes": 410391
+      }
+     ]
+    },
+    {
+     "id": "V2",
+     "name": "PalmMuteChug",
+     "label": "Palm-mute chug",
+     "description": "Double-tracked high-gain palm-muted power chords.",
+     "suits": [
+      "medium",
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Guitar_V2_PalmMuteChug_A.wav",
+       "ogg": "AM_Guitar_V2_PalmMuteChug_A.ogg",
+       "midi": "AM_Guitar_V2_PalmMuteChug_A.mid",
+       "description": "Chug rhythm",
+       "lufs": -20.0,
+       "true_peak_db": -9.56,
+       "seam_db": -240.0,
+       "ogg_bytes": 387948
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Guitar_V2_PalmMuteChug_B.wav",
+       "ogg": "AM_Guitar_V2_PalmMuteChug_B.ogg",
+       "midi": "AM_Guitar_V2_PalmMuteChug_B.mid",
+       "description": "Syncopated chug with more accents",
+       "lufs": -20.0,
+       "true_peak_db": -10.58,
+       "seam_db": -240.0,
+       "ogg_bytes": 390836
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Guitar_V2_PalmMuteChug_Fill.wav",
+       "ogg": "AM_Guitar_V2_PalmMuteChug_Fill.ogg",
+       "midi": "AM_Guitar_V2_PalmMuteChug_Fill.mid",
+       "description": "16th chug build in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -9.68,
+       "seam_db": -240.0,
+       "ogg_bytes": 387747
+      }
+     ]
+    },
+    {
+     "id": "V3",
+     "name": "AmbientSwells",
+     "label": "Ambient swells",
+     "description": "Volume-swelled notes into long delay and reverb.",
+     "suits": [
+      "calm"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Guitar_V3_AmbientSwells_A.wav",
+       "ogg": "AM_Guitar_V3_AmbientSwells_A.ogg",
+       "midi": "AM_Guitar_V3_AmbientSwells_A.mid",
+       "description": "Swell order 1",
+       "lufs": -20.0,
+       "true_peak_db": -8.49,
+       "seam_db": -98.3,
+       "ogg_bytes": 255801
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Guitar_V3_AmbientSwells_B.wav",
+       "ogg": "AM_Guitar_V3_AmbientSwells_B.ogg",
+       "midi": "AM_Guitar_V3_AmbientSwells_B.mid",
+       "description": "Swell order 2",
+       "lufs": -20.0,
+       "true_peak_db": -8.86,
+       "seam_db": -96.8,
+       "ogg_bytes": 256492
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Guitar_V3_AmbientSwells_Fill.wav",
+       "ogg": "AM_Guitar_V3_AmbientSwells_Fill.ogg",
+       "midi": "AM_Guitar_V3_AmbientSwells_Fill.mid",
+       "description": "Full chord swell in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -8.57,
+       "seam_db": -98.1,
+       "ogg_bytes": 256011
+      }
+     ]
+    },
+    {
+     "id": "V4",
+     "name": "LeadRiff",
+     "label": "Distorted lead riff",
+     "description": "High-gain single-note riff, double-tracked.",
+     "suits": [
+      "medium",
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Guitar_V4_LeadRiff_A.wav",
+       "ogg": "AM_Guitar_V4_LeadRiff_A.ogg",
+       "midi": "AM_Guitar_V4_LeadRiff_A.mid",
+       "description": "Low riff",
+       "lufs": -20.0,
+       "true_peak_db": -15.52,
+       "seam_db": -240.0,
+       "ogg_bytes": 515694
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Guitar_V4_LeadRiff_B.wav",
+       "ogg": "AM_Guitar_V4_LeadRiff_B.ogg",
+       "midi": "AM_Guitar_V4_LeadRiff_B.mid",
+       "description": "Answer riff (higher)",
+       "lufs": -20.0,
+       "true_peak_db": -14.91,
+       "seam_db": -240.0,
+       "ogg_bytes": 511665
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Guitar_V4_LeadRiff_Fill.wav",
+       "ogg": "AM_Guitar_V4_LeadRiff_Fill.ogg",
+       "midi": "AM_Guitar_V4_LeadRiff_Fill.mid",
+       "description": "Pentatonic run in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -15.48,
+       "seam_db": -240.0,
+       "ogg_bytes": 513091
+      }
+     ]
+    },
+    {
+     "id": "V5",
+     "name": "BaritoneTwang",
+     "label": "Baritone twang",
+     "description": "Low clean twangy notes, tremolo, slapback, spring-style verb.",
+     "suits": [
+      "calm",
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Guitar_V5_BaritoneTwang_A.wav",
+       "ogg": "AM_Guitar_V5_BaritoneTwang_A.ogg",
+       "midi": "AM_Guitar_V5_BaritoneTwang_A.mid",
+       "description": "Sparse twang line",
+       "lufs": -20.0,
+       "true_peak_db": -8.91,
+       "seam_db": -145.8,
+       "ogg_bytes": 408083
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Guitar_V5_BaritoneTwang_B.wav",
+       "ogg": "AM_Guitar_V5_BaritoneTwang_B.ogg",
+       "midi": "AM_Guitar_V5_BaritoneTwang_B.mid",
+       "description": "Busier line, triplet tremolo",
+       "lufs": -20.0,
+       "true_peak_db": -8.7,
+       "seam_db": -133.0,
+       "ogg_bytes": 427749
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Guitar_V5_BaritoneTwang_Fill.wav",
+       "ogg": "AM_Guitar_V5_BaritoneTwang_Fill.ogg",
+       "midi": "AM_Guitar_V5_BaritoneTwang_Fill.mid",
+       "description": "Descending run in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -8.39,
+       "seam_db": -240.0,
+       "ogg_bytes": 412623
+      }
+     ]
+    },
+    {
+     "id": "V6",
+     "name": "TremoloPicking",
+     "label": "Tremolo picking",
+     "description": "32nd-note tremolo-picked dark melody, double-tracked.",
+     "suits": [
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Guitar_V6_TremoloPicking_A.wav",
+       "ogg": "AM_Guitar_V6_TremoloPicking_A.ogg",
+       "midi": "AM_Guitar_V6_TremoloPicking_A.mid",
+       "description": "Melody 1",
+       "lufs": -20.0,
+       "true_peak_db": -13.15,
+       "seam_db": -240.0,
+       "ogg_bytes": 526738
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Guitar_V6_TremoloPicking_B.wav",
+       "ogg": "AM_Guitar_V6_TremoloPicking_B.ogg",
+       "midi": "AM_Guitar_V6_TremoloPicking_B.mid",
+       "description": "Melody 2 (lower)",
+       "lufs": -20.0,
+       "true_peak_db": -12.55,
+       "seam_db": -240.0,
+       "ogg_bytes": 523790
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Guitar_V6_TremoloPicking_Fill.wav",
+       "ogg": "AM_Guitar_V6_TremoloPicking_Fill.ogg",
+       "midi": "AM_Guitar_V6_TremoloPicking_Fill.mid",
+       "description": "Rising tremolo run in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -13.14,
+       "seam_db": -240.0,
+       "ogg_bytes": 527190
+      }
+     ]
+    },
+    {
+     "id": "V7",
+     "name": "HeavyChug",
+     "label": "Heavy detuned chug",
+     "description": "Drop-A gallop chugs at a 180 feel, quad-tracked.",
+     "suits": [
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_Guitar_V7_HeavyChug_A.wav",
+       "ogg": "AM_Guitar_V7_HeavyChug_A.ogg",
+       "midi": "AM_Guitar_V7_HeavyChug_A.mid",
+       "description": "Gallops",
+       "lufs": -20.0,
+       "true_peak_db": -14.68,
+       "seam_db": -240.0,
+       "ogg_bytes": 399515
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_Guitar_V7_HeavyChug_B.wav",
+       "ogg": "AM_Guitar_V7_HeavyChug_B.ogg",
+       "midi": "AM_Guitar_V7_HeavyChug_B.mid",
+       "description": "Syncopated breakdown",
+       "lufs": -20.0,
+       "true_peak_db": -17.42,
+       "seam_db": -240.0,
+       "ogg_bytes": 398073
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_Guitar_V7_HeavyChug_Fill.wav",
+       "ogg": "AM_Guitar_V7_HeavyChug_Fill.ogg",
+       "midi": "AM_Guitar_V7_HeavyChug_Fill.mid",
+       "description": "32nd chug build in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -14.68,
+       "seam_db": -240.0,
+       "ogg_bytes": 399377
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "FX",
+   "name": "FX / Texture",
+   "description": "Non-musical texture: radio, risers, tension, impacts, comms/data.",
+   "variants": [
+    {
+     "id": "V1",
+     "name": "RadioStatic",
+     "label": "Radio static",
+     "description": "Hiss, crackle, keyed static bursts with squelch.",
+     "suits": [
+      "calm",
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_FX_V1_RadioStatic_A.wav",
+       "ogg": "AM_FX_V1_RadioStatic_A.ogg",
+       "midi": "AM_FX_V1_RadioStatic_A.mid",
+       "description": "Bursts set 1",
+       "lufs": -20.0,
+       "true_peak_db": -9.73,
+       "seam_db": -240.0,
+       "ogg_bytes": 332478
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_FX_V1_RadioStatic_B.wav",
+       "ogg": "AM_FX_V1_RadioStatic_B.ogg",
+       "midi": "AM_FX_V1_RadioStatic_B.mid",
+       "description": "Bursts set 2",
+       "lufs": -20.0,
+       "true_peak_db": -9.6,
+       "seam_db": -240.0,
+       "ogg_bytes": 333891
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_FX_V1_RadioStatic_Fill.wav",
+       "ogg": "AM_FX_V1_RadioStatic_Fill.ogg",
+       "midi": "AM_FX_V1_RadioStatic_Fill.mid",
+       "description": "Long transmission in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -10.11,
+       "seam_db": -240.0,
+       "ogg_bytes": 331637
+      }
+     ]
+    },
+    {
+     "id": "V2",
+     "name": "RisersPulses",
+     "label": "Risers & pulses",
+     "description": "Sonar pings, heartbeat sub pulses, riser into the downbeat.",
+     "suits": [
+      "calm",
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_FX_V2_RisersPulses_A.wav",
+       "ogg": "AM_FX_V2_RisersPulses_A.ogg",
+       "midi": "AM_FX_V2_RisersPulses_A.mid",
+       "description": "Pings bars 1/5, 2-bar riser",
+       "lufs": -20.02,
+       "true_peak_db": -3.49,
+       "seam_db": -128.8,
+       "ogg_bytes": 309001
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_FX_V2_RisersPulses_B.wav",
+       "ogg": "AM_FX_V2_RisersPulses_B.ogg",
+       "midi": "AM_FX_V2_RisersPulses_B.mid",
+       "description": "Pings bars 3/7",
+       "lufs": -20.0,
+       "true_peak_db": -3.5,
+       "seam_db": -129.3,
+       "ogg_bytes": 313407
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_FX_V2_RisersPulses_Fill.wav",
+       "ogg": "AM_FX_V2_RisersPulses_Fill.ogg",
+       "midi": "AM_FX_V2_RisersPulses_Fill.mid",
+       "description": "4-bar riser",
+       "lufs": -20.0,
+       "true_peak_db": -3.59,
+       "seam_db": -129.3,
+       "ogg_bytes": 349952
+      }
+     ]
+    },
+    {
+     "id": "V3",
+     "name": "TensionTexture",
+     "label": "Tension texture",
+     "description": "Ticking clock, metallic drone, rumble.",
+     "suits": [
+      "calm",
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_FX_V3_TensionTexture_A.wav",
+       "ogg": "AM_FX_V3_TensionTexture_A.ogg",
+       "midi": "AM_FX_V3_TensionTexture_A.mid",
+       "description": "8th ticks",
+       "lufs": -20.0,
+       "true_peak_db": -9.27,
+       "seam_db": -240.0,
+       "ogg_bytes": 376009
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_FX_V3_TensionTexture_B.wav",
+       "ogg": "AM_FX_V3_TensionTexture_B.ogg",
+       "midi": "AM_FX_V3_TensionTexture_B.mid",
+       "description": "16th ticks in bars 5-8",
+       "lufs": -20.0,
+       "true_peak_db": -9.18,
+       "seam_db": -240.0,
+       "ogg_bytes": 385293
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_FX_V3_TensionTexture_Fill.wav",
+       "ogg": "AM_FX_V3_TensionTexture_Fill.ogg",
+       "midi": "AM_FX_V3_TensionTexture_Fill.mid",
+       "description": "32nd ticks in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -8.99,
+       "seam_db": -240.0,
+       "ogg_bytes": 382383
+      }
+     ]
+    },
+    {
+     "id": "V4",
+     "name": "Impacts",
+     "label": "Impacts & downlifters",
+     "description": "Sub booms with cracks, downward sweeps, reverse swells.",
+     "suits": [
+      "medium",
+      "intense"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_FX_V4_Impacts_A.wav",
+       "ogg": "AM_FX_V4_Impacts_A.ogg",
+       "midi": "AM_FX_V4_Impacts_A.mid",
+       "description": "Impacts on bars 1 and 5",
+       "lufs": -20.04,
+       "true_peak_db": -3.12,
+       "seam_db": -239.6,
+       "ogg_bytes": 292486
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_FX_V4_Impacts_B.wav",
+       "ogg": "AM_FX_V4_Impacts_B.ogg",
+       "midi": "AM_FX_V4_Impacts_B.mid",
+       "description": "Impacts on bars 3 and 7 + whooshes",
+       "lufs": -19.89,
+       "true_peak_db": -3.32,
+       "seam_db": -240.0,
+       "ogg_bytes": 293356
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_FX_V4_Impacts_Fill.wav",
+       "ogg": "AM_FX_V4_Impacts_Fill.ogg",
+       "midi": "AM_FX_V4_Impacts_Fill.mid",
+       "description": "Riser into the bar-1 impact",
+       "lufs": -20.02,
+       "true_peak_db": -3.12,
+       "seam_db": -239.9,
+       "ogg_bytes": 315533
+      }
+     ]
+    },
+    {
+     "id": "V5",
+     "name": "CommsData",
+     "label": "Comms & data",
+     "description": "Morse keying, data chirps, computer blips through a radio band.",
+     "suits": [
+      "calm",
+      "medium"
+     ],
+     "patterns": [
+      {
+       "id": "A",
+       "role": "main",
+       "file": "AM_FX_V5_CommsData_A.wav",
+       "ogg": "AM_FX_V5_CommsData_A.ogg",
+       "midi": "AM_FX_V5_CommsData_A.mid",
+       "description": "Comms set 1",
+       "lufs": -20.0,
+       "true_peak_db": -9.12,
+       "seam_db": -240.0,
+       "ogg_bytes": 339190
+      },
+      {
+       "id": "B",
+       "role": "alt",
+       "file": "AM_FX_V5_CommsData_B.wav",
+       "ogg": "AM_FX_V5_CommsData_B.ogg",
+       "midi": "AM_FX_V5_CommsData_B.mid",
+       "description": "Comms set 2",
+       "lufs": -20.0,
+       "true_peak_db": -11.58,
+       "seam_db": -240.0,
+       "ogg_bytes": 338087
+      },
+      {
+       "id": "Fill",
+       "role": "fill",
+       "file": "AM_FX_V5_CommsData_Fill.wav",
+       "ogg": "AM_FX_V5_CommsData_Fill.ogg",
+       "midi": "AM_FX_V5_CommsData_Fill.mid",
+       "description": "Data burst in bar 8",
+       "lufs": -20.0,
+       "true_peak_db": -8.57,
+       "seam_db": -240.0,
+       "ogg_bytes": 343380
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "totals": {
+  "layers": 8,
+  "variants": 47,
+  "files": 141,
+  "ogg_bytes": 50163953
+ },
+ "changes_from_v1": {
+  "Lead": "all v1 leads (V1 Arp, V2 PluckMotif, V3 DarkBells) removed; Lead V1-V5 are new sounds",
+  "renamed": "v1 files AM_<Layer>_V<n>_<Name>.wav are now AM_<Layer>_V<n>_<Name>_A.wav (identical audio)",
+  "new_layers": [
+   "Perc",
+   "Orch"
+  ],
+  "archive": "audio_src/stems_v1/"
+ }
+}
