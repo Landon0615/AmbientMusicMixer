@@ -10,8 +10,13 @@ goes MEDIUM / INTENSE and how long it takes to calm down) for the whole server. 
 
 ## Download
 
-Get **AmbientMusicMixer-v3.zip** from the [Releases](../../releases) page. It contains everything,
-including the loops. Unzip it and double-click `Start Mixer.bat` (Windows) or run `./start_mixer.sh` (Linux).
+Get **AmbientMusicMixer-v3.1.zip** (under *Assets*) from the [latest release](../../releases/latest). It contains
+everything, including the loops. Unzip it and double-click `Start Mixer.bat` (Windows) or run `./start_mixer.sh` (Linux).
+
+**New here? Read the [user guide](docs/USER_GUIDE.md)**: install, build a mix, and put it on your server,
+with labelled screenshots.
+
+![The mixer](docs/images/mixer-1-build.png)
 
 This repository holds the source code. The loops (`mixer/stems/*.ogg`) are only in the release zip.
 
