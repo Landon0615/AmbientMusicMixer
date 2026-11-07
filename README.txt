@@ -1,4 +1,4 @@
-AMBIENT MUSIC MIXER  (v3)  -  for the Insurgency: Sandstorm mod "Ambient Music"
+AMBIENT MUSIC MIXER  (v3.1)  -  for the Insurgency: Sandstorm mod "Ambient Music"
 mod.io: https://mod.io/g/insurgencysandstorm  -  mod ID 6488692  -  mutator: AmbientMusic
 ==============================================================================================
 
@@ -45,13 +45,37 @@ PUT IT ON YOUR SERVER
        [/AmbientMusic/Mutators/AmbientMusic.AmbientMusic_C]
        MusicMode=Mix
        MixVolume=80
+       MediumAt=3
        +Mixes="Full Build|Drums=V6:0,25,90:pat=AB:fill=4|Perc=V1:15,70,85:pat=AB:fill=4|..."
+     (MediumAt / IntenseAt / CalmDownTime lines appear only if you moved the MUSIC SENSITIVITY sliders.)
   4. KEEP THE DOUBLE QUOTES around every +Mixes value. Without them the game only reads the name and
      the mix is silent. Do not edit the recipe text by hand; change it in the mixer and copy again.
   5. The server needs the mod and the mutator: subscribe the server to mod 6488692 and add
      AmbientMusic to its mutators (e.g. -mutators=AmbientMusic, or your mutator list).
   6. Start the server. Game.ini is only read at start-up: restart after every change.
-     MusicMode: Mix = your mixes, Classic = the mod's original tracks, Random = either, per map.
+     MusicMode: Mix = one of your ticked mixes per map (equal odds).
+                Classic = the mod's original tracks.
+                Random = one of your ticked mixes OR Classic per map, all equally likely: with N mixes
+                ticked, Classic plays on about 1 map in N+1 (tick fewer mixes to hear Classic more often).
+
+MUSIC SENSITIVITY (mod v3.1 or later)
+  Under SERVER EXPORT, three sliders set WHEN the music changes. One setting for the whole server; it
+  works in every MusicMode, Classic included. The page writes a key only when it differs from the default
+  (RESET TO DEFAULT removes them again). Defaults:
+    MediumAt=5       "Medium starts at": combat heat for MEDIUM  (0.5 - 10, step 0.5). 5 = real fighting nearby.
+    IntenseAt=20     "Intense starts at": combat heat for INTENSE (1 - 30, step 0.5, must be above MediumAt).
+                     20 = a sustained firefight.
+    CalmDownTime=10  seconds the music stays MEDIUM before it can go back to CALM (5 - 90).
+                     INTENSE stays at least 3/5 of it (6 s at the default).
+  Combat heat: +1 for every shot fired within 60 m of you, +2 more if it passes within 8 m of you,
+  +4 every half second while you are suppressed, at least 6 when you are hit. It halves every 5 seconds.
+  The music steps back down when the heat falls below 3/5 of IntenseAt (INTENSE -> MEDIUM, 12 by default)
+  and below half of MediumAt (MEDIUM -> CALM, 2.5 by default), once the time above has passed.
+  Lower = the music reacts to less shooting; higher = only big fights change it. Getting hit on its own
+  sets the heat to 6: with the defaults that gives MEDIUM, not INTENSE.
+  Want the old, jumpier v3.0 behaviour? Set MediumAt=2, IntenseAt=5, CalmDownTime=20.
+  Bad values in Game.ini: a value out of range falls back to its default; IntenseAt not above MediumAt
+  makes both fall back to 5 and 20. Older mod versions (v3.0) ignore these keys.
 
 EFFECTS (FX button on each layer)
   Low-pass (per intensity), high-pass, pan, reverb, delay (1/4 or dotted 1/8) and drive all play in game.

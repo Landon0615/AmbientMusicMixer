@@ -111,10 +111,48 @@
   // Master fader = in-game MixVolume: bus gain (MixVolume/100)^2, default 80.
   function mixVolumeOf(doc) { return doc.mixVolume == null || doc.mixVolume === '' ? 80 : clampVol(doc.mixVolume); }
   function iniSection(doc, layerNames) {
-    var lines = [SECTION, 'MusicMode=' + (MODES.indexOf(doc.mode) >= 0 ? doc.mode : 'Mix'), 'MixVolume=' + mixVolumeOf(doc)];
+    var lines = [SECTION, 'MusicMode=' + (MODES.indexOf(doc.mode) >= 0 ? doc.mode : 'Mix'), 'MixVolume=' + mixVolumeOf(doc)].concat(sensLines(doc));
     // Quoted: Unreal's ini reader truncates an unquoted value at the first '|'. Names never contain '"' or '\\'.
     (doc.mixes || []).forEach(function (m) { if (m.rotation) lines.push('+Mixes="' + recipeLine(m, layerNames) + '"'); });
     return lines.join('\n') + '\n';
+  }
+
+  // v3.1 music sensitivity = mutator MediumAt / IntenseAt / CalmDownTime (one setting for the whole server, all modes).
+  // Combat heat: +1 per shot within 60 m, +2 more when it passes within 8 m, +4 per half second while suppressed, at
+  // least 6 when hit; it halves every 5 s. MEDIUM at heat >= MediumAt, INTENSE at >= IntenseAt; back down below
+  // IntenseAt*3/5 after CalmDownTime*3/5 s in INTENSE, and below MediumAt/2 after CalmDownTime s in MEDIUM.
+  // Same ranges as the mutator; a key is exported only when it differs from the default (absent key = default).
+  // Defaults since 2026-11-06 (v3.1 ship): 5 / 20 / 10; IntenseAt max 30. v3.0 behaviour = MediumAt=2 IntenseAt=5 CalmDownTime=20.
+  var SENS = [
+    { id: 'mediumAt', key: 'MediumAt', def: 5, min: 0.5, max: 10, step: 0.5 },
+    { id: 'intenseAt', key: 'IntenseAt', def: 20, min: 1, max: 30, step: 0.5 },
+    { id: 'calmDownTime', key: 'CalmDownTime', def: 10, min: 5, max: 90, step: 1 }];
+  var DEC_RE = /^[+-]?(\d+\.?\d*|\.\d+)([eE][+-]?\d+)?$/;
+  function sensNum(v, s) {   // number or decimal string -> snapped + clamped; anything else -> null
+    if (typeof v === 'string') { v = v.trim(); if (!DEC_RE.test(v)) return null; v = Number(v); }
+    if (typeof v !== 'number' || !isFinite(v)) return null;
+    return Math.max(s.min, Math.min(s.max, Math.round(v / s.step) * s.step));
+  }
+  function sensOf(doc) {
+    var o = {};
+    SENS.forEach(function (s) { var v = sensNum((doc || {})[s.id], s); o[s.id] = v === null ? s.def : v; });
+    if (o.intenseAt <= o.mediumAt) o.intenseAt = o.mediumAt + 0.5;   // mediumAt <= 10, so this stays in range
+    return o;
+  }
+  function sensLines(doc) {
+    var o = sensOf(doc), out = [];
+    SENS.forEach(function (s) { if (o[s.id] !== s.def) out.push(s.key + '=' + String(o[s.id])); });
+    return out;
+  }
+  function sensLabel(id, v) {
+    if (id === 'mediumAt')
+      return v <= 0.5 ? 'a single shot nearby' : v <= 1.5 ? 'a couple of shots nearby' : v <= 3 ? 'a few shots nearby or one near miss'
+        : v <= 4.5 ? 'a short exchange of fire' : v <= 6 ? 'real fighting nearby: near misses, suppression or a hit' : 'only a sustained firefight';
+    if (id === 'intenseAt')
+      return v <= 2 ? 'a few shots nearby' : v <= 4.5 ? 'a near miss or a short exchange' : v <= 6 ? 'under fire: near misses, suppression or a hit'
+        : v <= 12 ? 'a heavy firefight (a hit alone is not enough)' : v <= 22 ? 'a sustained firefight (a hit alone is not enough)'
+        : 'only the heaviest, longest fighting';
+    return v <= 10 ? 'quick' : v <= 30 ? 'normal' : v <= 50 ? 'slow' : 'very slow';
   }
 
   // Accepts "Name|Layer=...", a whole "+Mixes=Name|..." line, quoted or not (v1/v2/v3). Returns {mix, warnings} or throws.
@@ -177,6 +215,7 @@
   var api = { DEFAULT_LAYERS: DEFAULT_LAYERS, LAYERS: DEFAULT_LAYERS, MODES: MODES, SECTION: SECTION, NAME_MAX: NAME_MAX,
               DLY_TIMES: DLY_TIMES, sanitizeName: sanitizeName, clampVol: clampVol, clampInt: clampInt, gainOf: gainOf,
               mixVolumeOf: mixVolumeOf, defaultLayer: defaultLayer, normVariant: normVariant, levelVariants: levelVariants, normLayer: normLayer, normMix: normMix, layerSpec: layerSpec,
+              SENS: SENS, sensOf: sensOf, sensLines: sensLines, sensLabel: sensLabel,
               recipeLine: recipeLine, iniSection: iniSection, parseRecipe: parseRecipe, patternFor: patternFor };
   if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.MixRecipe = api;
 })(this);

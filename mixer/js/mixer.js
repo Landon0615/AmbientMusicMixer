@@ -104,7 +104,11 @@
 
   // ------------------------------------------------------------------ model helpers
   function curMix() { for (var i = 0; i < doc.mixes.length; i++) if (doc.mixes[i].id === curId) return doc.mixes[i]; return null; }
-  function normDoc(d) { d.mixes = (d.mixes || []).map(function (m) { return R.normMix(m, LAYERS); }); d.mode = d.mode || 'Mix'; return d; }
+  function normDoc(d) {
+    d.mixes = (d.mixes || []).map(function (m) { return R.normMix(m, LAYERS); }); d.mode = d.mode || 'Mix';
+    var sv = R.sensOf(d); R.SENS.forEach(function (s) { d[s.id] = sv[s.id]; });   // v3.1 music sensitivity
+    return d;
+  }
   function isDirty() { return JSON.stringify(doc) !== savedJson; }
   // variant playing for layer L at intensity level lv (default: the current target level)
   function vidAt(L, m, lv) { var l = (m || curMix()).layers[L]; return l ? R.levelVariants(l.variant)[lv == null ? lvl.target : lv] : 'Off'; }
@@ -407,7 +411,45 @@
     var pv = rot.filter(usesPreview).map(function (m) { return m.name; });
     void pv;
     $('exportWarn').textContent = w.join(' ');
+    var n = rot.length;   // the mutator: Random = RandomIntegerInRange(0, N), N = Classic -> every option 1 in N+1
+    $('modeHint').textContent = doc.mode === 'Random'
+      ? 'Random: each map picks one of the ' + n + ' ticked mix' + (n === 1 ? '' : 'es') + ' or Classic, all equally likely (Classic 1 in ' + (n + 1) + '). Tick more mixes to hear Classic less often.'
+      : doc.mode === 'Mix' ? 'Mix: each map picks one of the ticked mixes at random (equal odds). Classic is never played.'
+      : 'Classic: the v2.2 tracks on every map; the mixes are ignored.';
+    renderSens();
   }
+
+  // ------------------------------------------------------------------ v3.1 music sensitivity (whole server, all modes)
+  function renderSens() {
+    var sv = R.sensOf(doc);
+    R.SENS.forEach(function (s) {
+      var key = s.key, inp = $('sens' + key), v = sv[s.id];
+      if (+inp.value !== v) inp.value = v;
+      var out = $('sens' + key + 'Val'); out.innerHTML = '';
+      var b = el('b'); b.textContent = s.id === 'calmDownTime' ? v + ' s' : 'heat ' + v; out.appendChild(b);
+      out.appendChild(document.createTextNode(s.id === 'calmDownTime'
+        ? R.sensLabel(s.id, v) + ': MEDIUM holds at least ' + v + ' s, INTENSE ' + (v * 3 / 5) + ' s, after the fighting dies down'
+        : R.sensLabel(s.id, v)));
+      if (v === s.def) out.appendChild(document.createTextNode(' (default)'));
+    });
+    var def = R.sensLines(doc).length === 0;
+    $('sensReset').disabled = def;
+    $('sensNote').textContent = (def ? 'Defaults: nothing extra is written to Game.ini. ' : '') +
+      'Heat: +1 per shot within 60 m, +2 more if it passes within 8 m, +4 every half second while suppressed, at least 6 when hit; halves every 5 s.' +
+      ' Getting hit on its own (heat 6): ' + (sv.intenseAt <= 6 ? 'INTENSE.' : sv.mediumAt <= 6 ? 'MEDIUM, not INTENSE (Intense starts above 6).'
+        : 'not even MEDIUM (Medium starts above 6).') +
+      ' The v3.0 feel was Medium 2, Intense 5, calm-down 20 s.' +
+      ' Needs Ambient Music v3.1 or later on the server (older versions ignore these keys).';
+  }
+  function sensInput() {
+    var id = this.getAttribute('data-sens'), v = +this.value;
+    doc[id] = v;   // keep MediumAt < IntenseAt by pushing the other slider
+    if (id === 'mediumAt' && doc.intenseAt <= v) doc.intenseAt = Math.min(30, v + 0.5);
+    if (id === 'intenseAt' && doc.mediumAt >= v) doc.mediumAt = Math.max(0.5, v - 0.5);
+    var sv = R.sensOf(doc); R.SENS.forEach(function (s) { doc[s.id] = sv[s.id]; });
+    changed();
+  }
+  function sensReset() { R.SENS.forEach(function (s) { doc[s.id] = s.def; }); changed(); }
 
   // ------------------------------------------------------------------ buffers (lazy fetch + decode, LRU)
   function fetchRaw(f) {
@@ -901,7 +943,7 @@
   function openImport() { $('modalErr').textContent = ''; $('modalText').value = ''; $('modal').hidden = false; $('modalText').focus(); }
   function closeModal() { $('modal').hidden = true; }
   function doImport() {
-    var lines = $('modalText').value.split(/\r?\n/), added = [], errs = [], warns = [], mode = null;
+    var lines = $('modalText').value.split(/\r?\n/), added = [], errs = [], warns = [], mode = null, sens = {};
     lines.forEach(function (raw, n) {
       var t = raw.trim();
       if (!t || t[0] === '[' || t[0] === ';') return;
@@ -909,6 +951,8 @@
       var mv = /^MixVolume\s*=\s*"?(-?[\d.]+)"?\s*$/i.exec(t);
       if (mv) { doc.mixVolume = R.clampVol(mv[1]); setMaster(); return; }
       if (mm) { var md = R.MODES.filter(function (x) { return x.toLowerCase() === mm[1].toLowerCase(); })[0]; if (md) mode = md; return; }
+      var ms = /^(MediumAt|IntenseAt|CalmDownTime)\s*=\s*"?([^"]*)"?\s*$/i.exec(t);
+      if (ms) { var sd = R.SENS.filter(function (x) { return x.key.toLowerCase() === ms[1].toLowerCase(); })[0]; sens[sd.id] = ms[2]; return; }
       try {
         var r = R.parseRecipe(t, LAYERS), mix = r.mix;
         mix.id = newId(); mix.rotation = true; mix.name = uniqueName(mix.name);
@@ -917,6 +961,11 @@
       } catch (e) { errs.push('line ' + (n + 1) + ': ' + e.message); }
     });
     if (mode) doc.mode = mode;
+    if (Object.keys(sens).length) {   // a pasted Game.ini section: missing keys mean the defaults
+      R.SENS.forEach(function (s) { doc[s.id] = s.id in sens ? sens[s.id] : s.def; });
+      var sv = R.sensOf(doc); R.SENS.forEach(function (s) { doc[s.id] = sv[s.id]; });
+    }
+    if (mode || Object.keys(sens).length) changed();
     if (added.length) { selectMix(added[added.length - 1].id); changed(); }
     if (errs.length || warns.length) {
       $('modalErr').textContent = (added.length ? 'Imported ' + added.length + '. ' : '') + errs.concat(warns).join('\n');
@@ -962,6 +1011,8 @@
     $('mixName').addEventListener('change', actRenameCommit);
     $('mixName').addEventListener('keydown', function (e) { if (e.key === 'Enter') this.blur(); });
     $('mode').addEventListener('change', function () { doc.mode = this.value; changed(); });
+    R.SENS.forEach(function (s) { $('sens' + s.key).addEventListener('input', sensInput); });
+    $('sensReset').addEventListener('click', sensReset);
     $('btnCopy').addEventListener('click', copyIni);
     $('modalOk').addEventListener('click', doImport);
     $('modalCancel').addEventListener('click', closeModal);
@@ -1029,6 +1080,14 @@
       check(qok && R.recipeLine(uq, LAYERS) === R.recipeLine(qq, LAYERS), 'Game.ini lines are quoted (' + iniLines.length + ') and re-import; unquoted import still works');
       var mvLine = R.iniSection(doc, LAYERS).split('\n')[2];
       check(mvLine === 'MixVolume=' + R.mixVolumeOf(doc), 'export has ' + mvLine + ' (master fader)');
+      var sx = function (o) { return R.iniSection(Object.assign({ mode: 'Classic', mixes: [] }, o), LAYERS).split('\n').slice(3).join(' ').trim(); };
+      check(sx({}) === '' && sx({ mediumAt: 5, intenseAt: 20, calmDownTime: 10 }) === '' &&
+            sx({ mediumAt: 2, intenseAt: 5, calmDownTime: 20 }) === 'MediumAt=2 IntenseAt=5 CalmDownTime=20' &&
+            sx({ mediumAt: 0.5, intenseAt: 1.5, calmDownTime: 6 }) === 'MediumAt=0.5 IntenseAt=1.5 CalmDownTime=6' &&
+            sx({ mediumAt: 4, intenseAt: 3 }) === 'MediumAt=4 IntenseAt=4.5' && sx({ mediumAt: 'x', intenseAt: 99, calmDownTime: 2.4 }) === 'IntenseAt=30 CalmDownTime=5' &&
+            sx({ mediumAt: '2.74' }) === 'MediumAt=2.5',
+        'sensitivity export: defaults (5/20/10) write nothing, v3.0 values 2/5/20 are written, test/bad values snap + clamp, IntenseAt > MediumAt');
+      check(/equally likely \(Classic 1 in \d+\)/.test($('modeHint').textContent) || doc.mode !== 'Random', 'MusicMode hint: ' + $('modeHint').textContent.slice(0, 60));
       var keepMv = doc.mixVolume, t1 = { layers: {} }, L0 = LAYERS[0], L1 = LAYERS[1];
       LAYERS.forEach(function (L) { t1.layers[L] = R.defaultLayer(); });
       t1.layers[L0] = Object.assign(R.defaultLayer(), { variant: VIDS[L0][0], vol: [100, 50, 0] });

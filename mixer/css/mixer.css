@@ -261,3 +261,15 @@ input[type=range] { width: 100%; height: 22px; margin: 0; cursor: pointer; accen
 #loudWarn { margin-top: 6px; }
 
 .fx-note { font-size: 11px; color: var(--dim); margin: 6px 4px 0; }
+
+/* v3.1 music sensitivity (MediumAt / IntenseAt / CalmDownTime) + MusicMode hint */
+.mode-hint { margin: 2px 0 8px; }
+.sens { border: 1px solid var(--line2); border-radius: var(--r); padding: 8px 10px; margin: 8px 0; background: var(--bg2); min-width: 0; }
+.sens-head { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; font: 700 12px var(--mono); letter-spacing: .1em; margin-bottom: 6px; }
+.sens-head .small { font-weight: 400; letter-spacing: 0; font-family: var(--sans); }
+.sens-row { display: grid; grid-template-columns: 9.5em minmax(0, 1fr); gap: 2px 10px; align-items: center; margin: 6px 0; max-width: 760px; }
+.sens-row label { font-size: 13px; }
+.sens-row input[type=range] { width: 100%; min-width: 0; margin: 0; }
+.sens-val { grid-column: 2; font-size: 12px; color: var(--accent2); }
+.sens-val b { font: 700 12px var(--mono); color: var(--text); margin-right: 6px; }
+@media (max-width: 520px) { .sens-row { grid-template-columns: minmax(0, 1fr); } .sens-val { grid-column: 1; } }

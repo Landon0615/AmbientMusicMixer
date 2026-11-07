@@ -86,9 +86,33 @@
       <select id="mode">
         <option value="Mix">Mix &mdash; play a random mix from the rotation</option>
         <option value="Classic">Classic &mdash; v2.2 tracks</option>
-        <option value="Random">Random &mdash; Mix or Classic per map</option>
+        <option value="Random">Random &mdash; ticked mixes + Classic, equal odds</option>
       </select>
       <span class="warn" id="exportWarn"></span>
+    </div>
+    <p class="dim small mode-hint" id="modeHint"></p>
+    <div class="sens" id="sensBox" role="group" aria-labelledby="sensTitle">
+      <div class="sens-head"><span id="sensTitle">MUSIC SENSITIVITY</span>
+        <span class="dim small">whole server, every mode (Classic too) &middot; Game.ini MediumAt / IntenseAt / CalmDownTime</span></div>
+      <div class="sens-row">
+        <label for="sensMediumAt">Medium starts at</label>
+        <input type="range" id="sensMediumAt" data-sens="mediumAt" min="0.5" max="10" step="0.5">
+        <span class="sens-val" id="sensMediumAtVal"></span>
+      </div>
+      <div class="sens-row">
+        <label for="sensIntenseAt">Intense starts at</label>
+        <input type="range" id="sensIntenseAt" data-sens="intenseAt" min="1" max="30" step="0.5">
+        <span class="sens-val" id="sensIntenseAtVal"></span>
+      </div>
+      <div class="sens-row">
+        <label for="sensCalmDownTime">Calm-down time</label>
+        <input type="range" id="sensCalmDownTime" data-sens="calmDownTime" min="5" max="90" step="1">
+        <span class="sens-val" id="sensCalmDownTimeVal"></span>
+      </div>
+      <div class="export-row">
+        <button class="btn" id="sensReset">RESET TO DEFAULT</button>
+        <span class="dim small" id="sensNote"></span>
+      </div>
     </div>
     <pre class="ini" id="ini"></pre>
     <div class="export-row">

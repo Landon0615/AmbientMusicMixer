@@ -178,9 +178,50 @@ def mix_volume_of(doc):
     return 80 if v is None or v == '' else clamp_vol(v)
 
 
+# v3.1 music sensitivity = mutator MediumAt / IntenseAt / CalmDownTime (whole server, all modes). Same rules as
+# recipe.js sensOf/sensLines: snapped to the step, clamped, IntenseAt > MediumAt; exported only when not default.
+# Defaults since 2026-11-06: 5 / 20 / 10 (v3.0 behaviour = 2 / 5 / 20); IntenseAt max 30.
+SENS = [('mediumAt', 'MediumAt', 5, 0.5, 10, 0.5), ('intenseAt', 'IntenseAt', 20, 1, 30, 0.5),
+        ('calmDownTime', 'CalmDownTime', 10, 5, 90, 1)]
+_DEC = re.compile(r'^[+-]?(\d+\.?\d*|\.\d+)([eE][+-]?\d+)?$')
+
+
+def _sens_num(v, lo, hi, step):
+    if isinstance(v, str):
+        v = v.strip()
+        if not _DEC.match(v):
+            return None
+        v = float(v)
+    if isinstance(v, bool) or not isinstance(v, (int, float)):
+        return None
+    v = float(v)
+    if v != v or v in (float('inf'), float('-inf')):
+        return None
+    return max(lo, min(hi, jsround(v / step) * step))
+
+
+def sens_of(doc):
+    o = {}
+    for sid, _key, dflt, lo, hi, step in SENS:
+        v = _sens_num((doc or {}).get(sid), lo, hi, step)
+        o[sid] = dflt if v is None else v
+    if o['intenseAt'] <= o['mediumAt']:
+        o['intenseAt'] = o['mediumAt'] + 0.5
+    return {k: (int(v) if float(v).is_integer() else v) for k, v in o.items()}   # 2.0 -> 2 (JSON/JS look the same)
+
+
+def _fmt(v):
+    return '%d' % v if float(v).is_integer() else repr(float(v))
+
+
+def sens_lines(doc):
+    o = sens_of(doc)
+    return ['%s=%s' % (key, _fmt(o[sid])) for sid, key, dflt, _lo, _hi, _st in SENS if o[sid] != dflt]
+
+
 def ini_section(doc, layer_names=None):
     lines = [SECTION, 'MusicMode=' + (doc.get('mode') if doc.get('mode') in MODES else 'Mix'),
-             'MixVolume=%d' % mix_volume_of(doc)]
+             'MixVolume=%d' % mix_volume_of(doc)] + sens_lines(doc)
     # quoted: Unreal's ini reader truncates an unquoted value at the first '|' (names never contain '"' or '\\')
     lines += ['+Mixes="%s"' % recipe_line(m, layer_names) for m in doc.get('mixes', []) if m.get('rotation')]
     return '\n'.join(lines) + '\n'
@@ -460,6 +501,7 @@ def validate_doc(doc):
     seeded = [str(x) for x in doc.get('seeded') or [] if isinstance(x, str)][:20]
     out = {'version': DOC_VERSION, 'kitSchema': 2, 'seeded': seeded,
            'mode': doc.get('mode') if doc.get('mode') in MODES else 'Mix', 'mixVolume': mix_volume_of(doc), 'mixes': []}
+    out.update(sens_of(doc))
     names = kit_layer_names()
     seen_names, seen_ids = set(), set()
     for m in doc['mixes']:
